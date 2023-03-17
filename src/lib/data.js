@@ -7,10 +7,13 @@ export const sections = {
 			A214: ["Vobling", "Voyado", "Warpin Media", "Swedbank"],
 		},
 		{
-			A215: ["Tutu", "Vattenfall", "MSB", "Zington", "Enfo"],
+			// Tutus was spelled Tutu in name list
+			A215: ["Tutus", "Vattenfall", "MSB", "Zington", "Enfo"],
 		},
 		{
-			A218: ["Sharpness", "System Verification", "Svenska Kraftnät", "Truesec"],
+			// Sharpness AB was called Sharpness in name list
+			// Svenska kraftnät was called Svenska Kraftnät in name list
+			A218: ["Sharpness AB", "System Verification", "Svenska kraftnät", "Truesec"],
 		},
 	],
 	B: [
@@ -18,10 +21,12 @@ export const sections = {
 			B201: ["Prevas", "Releye", "Sebratec", "Sopra Steria"],
 		},
 		{
-			B202: ["Polisen", "BOXbygg", "Substorm"],
+			// BOX bygg was called BOXbygg in name list
+			B202: ["Polisen", "BOX bygg", "Substorm"],
 		},
 		{
-			B204: ["Nordcloud", "Nordlo", "Orange Cyberdefense", "Orange business services"],
+			// Orange Business Services was called Orange business services in name list
+			B204: ["Nordcloud", "Nordlo", "Orange Cyberdefense", "Orange Business Services"],
 		},
 		{
 			B205: ["Epinova", "Arbetsförmedlingen", "Mestro"],
@@ -29,16 +34,20 @@ export const sections = {
 	],
 	C: [
 		{
-			C201: ["Climber", "Devoteam", "EdgeGuide", "Tietoevery"],
+			// Tietoevry was called Tietoevery in name list
+			C201: ["Climber", "Devoteam", "EdgeGuide", "Tietoevry"],
 		},
 		{
 			C204: ["Bonnier Healthcare", "Capgemini", "IBM", "Trafikförvaltningen – Region Stockholm"],
 		},
 		{
-			C205: ["Attolo", "B3", "Beyond Frames", "Grant Thorton", "Cegeka"],
+			// Attollo was called Attolo in name list
+			// B3 is missing from page
+			C205: ["Attollo" /*"B3"*/, "Beyond Frames", "Grant Thorton", "Cegeka"],
 		},
 		{
-			C208: ["Addpro", "Accigo", "Försäkringskassan", "Amanzia"],
+			// Föräkringskassan IT was called Försäkringskassan in name list
+			C208: ["Addpro", "Accigo", "Försäkringskassan IT", "Amanzia"],
 		},
 		{
 			C221: ["Inadra", "Innofactor", "Kommando", "Lantmännen"],
@@ -50,14 +59,19 @@ export const listOfCompanies = [
 	"Accigo",
 	"Addpro",
 	"Amanzia",
-	"Attollo",
+	// Attollo not in alphabetical order
 	"Arbetsförmedlingen",
-	"Beyondframes",
-	"Bonnier healthcare",
+	"Attollo",
+	// Beyond Frames was spelt Beyondframes
+	"Beyond Frames",
+	// Bonnier Healthcare was spelt Bonnier healthcare
+	"Bonnier Healthcare",
+	// apparently caps changes the object order (in front of the rest in list)
 	"BOX bygg",
+	// Capgemini not in alphabetical order
+	"Capgemini",
 	"Cegeka",
 	"Climber",
-	"Capgemini",
 	"Devoteam",
 	"EdgeGuide",
 	"Enfo",
@@ -73,16 +87,20 @@ export const listOfCompanies = [
 	"MagiCAD",
 	"Mestro",
 	"MSB",
-	"Nordlo",
+	// Nordlo not in alphabetical order
 	"Nordcloud",
+	"Nordlo",
 	"Orange Business Services",
-	"Orange cyberdefense",
-	"Prevas",
+	// Orange Cyberdefense was spelt Orange cyberdefense
+	"Orange Cyberdefense",
+	// Prevas not in alphabetical order
 	"Polisen",
+	"Prevas",
 	"Releye",
 	"Sebratec",
 	"Sharpness AB",
-	"SignUp software",
+	// Signup Software was spelt Signup software
+	"Signup Software",
 	"Sopra Steria",
 	"Substorm",
 	"Svensk Driftpartner",
@@ -91,8 +109,9 @@ export const listOfCompanies = [
 	"Swedbank",
 	"Trafikförvaltningen – Region Stockholm",
 	"Truesec",
-	"Tutus",
+	// Tietoevry not in alphabetical order
 	"Tietoevry",
+	"Tutus",
 	"Vattenfall",
 	"Vobling",
 	"Voyado",
