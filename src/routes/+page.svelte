@@ -6,11 +6,14 @@
 	import Company from "$lib/Company.svelte";
 
 	let showCompaniesInClassroom = {
-		A211: false,
-		A214: false,
-		A215: false,
-		A218: false,
+		// A211: false,
+		// A214: false,
+		// A215: false,
+		// A218: false,
 	};
+
+	let viewCompany = "";
+	let viewCompanyName = "";
 
 	function showCompanies(key) {
 		// showCompaniesInClassroom = Object.entries(showCompaniesInClassroom).map(
@@ -21,75 +24,89 @@
 		return true;
 	}
 
-	function parseData(inputArray, i) {
-		const lines = inputArray[i]
-			.split("\n")
-			.map((line) => line.trim())
-			.filter((line) => line.length > 0);
+	function parseData(inputObject) {
+		// console.log(inputObject);
+		try {
+			const lines = inputObject
+				.split("\n")
+				.map((line) => line.trim())
+				.filter((line) => line.length > 0);
 
-		const obj = {};
-		let currentKey = "";
-		let currentArray = [];
+			const obj = {};
+			let currentKey = "";
+			let currentArray = [];
 
-		lines.forEach((line) => {
-			if (line.endsWith(":")) {
-				// we have a new key
-				currentKey = line.slice(0, -1);
+			lines.forEach((line) => {
+				if (line.endsWith(":")) {
+					// we have a new key
+					currentKey = line.slice(0, -1);
 
-				if (currentKey === "Om oss/att jobba hos oss") {
-				} else if (currentKey === "Mer om oss") {
-					// special case for 'Mer om oss' with three keys and empty values
-					obj[currentKey] = {
-						"Se företagsfilm": "",
-						Webbsida: "",
-						LinkedIn: "",
-					};
-				} else if (
-					currentKey === "Vi är intresserade av dig som studerar" ||
-					currentKey === "Vi är intresserade av att"
-				) {
-					// start a new array for these keys
-					currentArray = [];
-					obj[currentKey] = currentArray;
+					if (currentKey === "Om oss/att jobba hos oss") {
+					} else if (currentKey === "Mer om oss") {
+						// special case for 'Mer om oss' with three keys and empty values
+						obj[currentKey] = {
+							"Se företagsfilm": "",
+							Webbsida: "",
+							LinkedIn: "",
+						};
+					} else if (
+						currentKey === "Vi är intresserade av dig som studerar" ||
+						currentKey === "Vi är intresserade av att"
+					) {
+						// start a new array for these keys
+						currentArray = [];
+						obj[currentKey] = currentArray;
+					} else {
+						// create a new key with an empty string value
+						obj[currentKey] = "";
+					}
 				} else {
-					// create a new key with an empty string value
-					obj[currentKey] = "";
-				}
-			} else {
-				// we have a value for the current key
+					// we have a value for the current key
 
-				if (currentKey === "Om oss/att jobba hos oss") {
-					obj[currentKey] = line;
-				} else if (currentKey === "Mer om oss") {
-					if (line.includes("Se företagsfilm")) {
-						obj[currentKey]["Se företagsfilm"] = line.slice(line.indexOf("(") + 1, -1);
-					} else if (line.includes("Webbsida")) {
-						obj[currentKey]["Webbsida"] = line.slice(line.indexOf("(") + 1, -1);
-					} else if (line.includes("LinkedIn")) {
-						obj[currentKey]["LinkedIn"] = line.slice(line.indexOf("(") + 1, -1);
+					if (currentKey === "Om oss/att jobba hos oss") {
+						obj[currentKey] = line;
+					} else if (currentKey === "Mer om oss") {
+						if (line.includes("Se företagsfilm")) {
+							obj[currentKey]["Se företagsfilm"] = line.slice(line.indexOf("(") + 1, -1);
+						} else if (line.includes("Webbsida")) {
+							if (line.includes("Webbsida1")) {
+								obj[currentKey]["Webbsida1"] = line.slice(line.indexOf("(") + 1, -1);
+							} else if (line.includes("Webbsida2")) {
+								obj[currentKey]["Webbsida2"] = line.slice(line.indexOf("(") + 1, -1);
+							} else {
+								obj[currentKey]["Webbsida"] = line.slice(line.indexOf("(") + 1, -1);
+							}
+						} else if (line.includes("LinkedIn")) {
+							obj[currentKey]["LinkedIn"] = line.slice(line.indexOf("(") + 1, -1);
+						}
+						// obj[currentKey][line] = "";
+					} else if (
+						currentKey === "Vi är intresserade av dig som studerar" ||
+						currentKey === "Vi är intresserade av att"
+					) {
+						// add value to current array
+						if (!obj[currentKey]) {
+							obj[currentKey] = [];
+						}
+						obj[currentKey].push(line);
+					} else if (currentKey === "Kompetenser vi värdesätter extra/letar efter") {
+						obj[currentKey] += line;
+					} else if (currentKey.includes("Du kan kontakta mig om du har några frågor")) {
+						obj[currentKey] += line;
 					}
-					// obj[currentKey][line] = "";
-				} else if (
-					currentKey === "Vi är intresserade av dig som studerar" ||
-					currentKey === "Vi är intresserade av att"
-				) {
-					// add value to current array
-					if (!obj[currentKey]) {
-						obj[currentKey] = [];
-					}
-					obj[currentKey].push(line);
-				} else if (currentKey === "Kompetenser vi värdesätter extra/letar efter") {
-					obj[currentKey] = line.split(",").map((s) => s.trim());
-				} else if (currentKey === "Kontakta mig om du har frågor") {
-					obj[currentKey] += line;
 				}
-			}
-		});
-		return obj;
+			});
+			// console.log("added " + obj);
+			return obj;
+		} catch (error) {
+			return error;
+		}
 	}
-	let allCompanies = [];
-	listOfCompanies.forEach((name, i) => {
-		allCompanies[name] = parseData(test_data, i);
+	let allCompanies = {};
+	listOfCompanies.forEach((name) => {
+		// console.log(name);
+		// console.log(test_data[name]);
+		allCompanies[name] = parseData(test_data[name]);
 	});
 
 	console.log(allCompanies);
@@ -109,12 +126,18 @@
 							class:a-button={i === 0}
 							class:b-button={i === 1}
 							class:c-button={i === 2}>{classroom}</button>
-						<div class="divide-y-1">
+						<div class="[&>*]:m-1">
 							{#if showCompaniesInClassroom[classroom]}
 								{#each companies as company}
-									<p>
+									<button
+										on:click={() => {
+											viewCompany = allCompanies[company];
+											// TODO make better
+											viewCompanyName = company;
+										}}
+										class="rounded-md bg-slate-300 p-2">
 										{company}
-									</p>
+									</button>
 								{/each}
 							{/if}
 						</div>
@@ -124,7 +147,9 @@
 		{/each}
 	</div>
 	<article>
-		<Company name={listOfCompanies[0]} companyData={allCompanies[listOfCompanies[0]]} />
+		<!-- {JSON.stringify(viewCompany)} -->
+		<!-- {allCompanies["Accigo"]} -->
+		<Company name={viewCompanyName} companyData={viewCompany} />
 	</article>
 </main>
 
