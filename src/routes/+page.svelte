@@ -1,53 +1,51 @@
 <script>
 	import { base } from "$app/paths";
-	const contents = [
-		{
-			name: "SvelteKit",
-			link: "https://kit.svelte.dev",
-			desc: "with adapter-static for easier Github Pages deployment",
-		},
-		{
-			name: "UnoCSS",
-			link: "https://github.com/unocss/unocss",
-			desc: "using Svelte scoped mode",
-		},
-		{
-			name: "Prettier Plugin TailwindCSS",
-			link: "https://github.com/tailwindlabs/prettier-plugin-tailwindcss",
-			desc: "for auto sorting of classes",
-		},
-		{
-			name: "Commit-and-Tag-Version",
-			link: "https://github.com/absolute-version/commit-and-tag-version",
-			desc: "for CHANGELOG generation and Github tagging of versions",
-		},
-		{
-			name: "PrismJS",
-			link: "https://prismjs.com",
-			desc: "with Prism-Svelte for syntax highlighting of code blocks",
-		},
-	];
+	import { sections } from "$lib/data.js";
+
+	let showCompaniesInClassroom = {
+		A211: false,
+		A214: false,
+		A215: false,
+		A218: false,
+	};
+
+	function showCompanies(key) {
+		showCompaniesInClassroom = Object.entries(showCompaniesInClassroom).map(
+			(object) => (object[1] = false)
+		);
+		console.log(showCompaniesInClassroom.key);
+		showCompaniesInClassroom[key] = true;
+		return true;
+	}
 </script>
 
-<main class="[&>*]:m-4">
-	<h1 class="text-4xl">Welcome to SvelteKit - UnoCSS template!</h1>
-	<p>
-		Visit <a class="underline-blue-600 underline hover:text-blue-600" href="https://kit.svelte.dev"
-			>kit.svelte.dev</a> to read the documentation for SvelteKit
-	</p>
-	<p>This template includes:</p>
-	<ul>
-		{#each contents as { name, link, desc }}
-			<li class="list-none">
-				<div class="flex flex-col items-start pb-4 font-serif">
-					<a class="underline-blue-600 text-2xl underline hover:text-blue-600" href={link}>
-						{name}
-					</a>
-					<span>{desc}</span>
-				</div>
-			</li>
+<main class="flex flex-col [&>*]:m-4">
+	<div class="w-64 items-center [&>*]:m-2">
+		{#each Object.entries(sections) as [sectionKey, sectionValue]}
+			<div>
+				{#each sectionValue as classrooms}
+					{#each Object.entries(classrooms) as [classroom, companies]}
+						<button
+							on:click={() => {
+								showCompanies(classroom);
+								console.log(classroom);
+							}}
+							class="self-center m-2 rounded-md bg-amber-400 p-2 hover:bg-amber-300"
+							>{classroom}</button>
+						<div class="divide-y-1">
+							{#if showCompaniesInClassroom[classroom]}
+								{#each companies as company}
+									<p>
+										{company}
+									</p>
+								{/each}
+							{/if}
+						</div>
+					{/each}
+				{/each}
+			</div>
 		{/each}
-	</ul>
+	</div>
 </main>
 
 <footer class="m-4 h-64">
