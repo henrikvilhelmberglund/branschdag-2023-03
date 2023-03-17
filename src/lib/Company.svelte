@@ -9,7 +9,6 @@
 	let showLookingFor = false;
 	let showContact = false;
 	let enabled = {};
-
 </script>
 
 <h1 class="text-xl">{name}</h1>
@@ -42,11 +41,11 @@
 		{/if}
 	{:else if key === "Mer om oss"}
 		{#if showMore}
-    <div class="flex-col">
-      {#each Object.entries(value) as [linkType, link]}
-      <a class="underline-2 underline-solid underline-blue underline" href={link}>{linkType}</a>
-			{/each}
-    </div>
+			<div class="flex-col">
+				{#each Object.entries(value) as [linkType, link]}
+					<a class="underline-2 underline-solid underline-blue underline" href={link}>{linkType}</a>
+				{/each}
+			</div>
 		{/if}
 	{:else if key === "Vi är intresserade av dig som studerar"}
 		{#if showStudentsWeAreInterestedIn}
@@ -64,15 +63,13 @@
 				</p>
 			{/each}
 		{/if}
-	{:else if key === "Kompetenser vi värdesätter extra/letar efter"}
+	{:else if key.includes("Kompetenser vi värdesätter")}
 		{#if showLookingFor}
-			{#each value as lookingFor}
-				<p>
-					{lookingFor}
-				</p>
-			{/each}
+			<p>
+				{value}
+			</p>
 		{/if}
-	{:else if key === "Kontakta mig om du har frågor"}
+	{:else if key === "Du kan kontakta mig om du har några frågor"}
 		{#if showContact}
 			<a href="mailto:{value}">{value}</a>
 		{/if}
