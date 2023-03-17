@@ -12,34 +12,35 @@
 </script>
 
 <h1 class="text-xl">{name}</h1>
-{#each Object.entries(companyData) as [key, value], i}
+{#each Object.entries(companyData) as [key, value]}
 	<button
 		on:click={() => {
 			// reset();
-			enabled[i] =
-				i === 0
+			enabled[key] =
+				key === "Om oss/att jobba hos oss"
 					? (showAbout = !showAbout)
-					: i === 1
+					: key === "Mer om oss"
 					? (showMore = !showMore)
-					: i === 2
+					: key === "Vi är intresserade av dig som studerar"
 					? (showStudentsWeAreInterestedIn = !showStudentsWeAreInterestedIn)
-					: i === 3
+					: key === "Vi är intresserade av att"
 					? (showInterestedIn = !showInterestedIn)
-					: i === 4
+					: key.includes("Kompetenser vi värdesätter")
 					? (showLookingFor = !showLookingFor)
-					: i === 5
+					: key === "Du kan kontakta mig om du har några frågor"
 					? (showContact = !showContact)
 					: "";
 		}}
 		class="key"
-		class:toggled={enabled[i]}>{key}</button>
+		class:toggled={enabled[key]}>{key}</button>
 	{#if key === "Om oss/att jobba hos oss"}
 		{#if showAbout}
 			<p>
 				{value}
 			</p>
 		{/if}
-	{:else if key === "Mer om oss"}
+	{/if}
+	{#if key === "Mer om oss"}
 		{#if showMore}
 			<div class="flex-col">
 				{#each Object.entries(value) as [linkType, link]}
@@ -47,7 +48,8 @@
 				{/each}
 			</div>
 		{/if}
-	{:else if key === "Vi är intresserade av dig som studerar"}
+	{/if}
+	{#if key === "Vi är intresserade av dig som studerar"}
 		{#if showStudentsWeAreInterestedIn}
 			{#each value as studentType}
 				<p>
@@ -55,7 +57,8 @@
 				</p>
 			{/each}
 		{/if}
-	{:else if key === "Vi är intresserade av att"}
+	{/if}
+	{#if key === "Vi är intresserade av att"}
 		{#if showInterestedIn}
 			{#each value as ourInterest}
 				<p>
@@ -63,22 +66,18 @@
 				</p>
 			{/each}
 		{/if}
-	{:else if key.includes("Kompetenser vi värdesätter")}
+	{/if}
+	{#if key.includes("Kompetenser vi värdesätter")}
 		{#if showLookingFor}
 			<p>
 				{value}
 			</p>
 		{/if}
-	{:else if key === "Du kan kontakta mig om du har några frågor"}
+	{/if}
+	{#if key === "Du kan kontakta mig om du har några frågor"}
 		{#if showContact}
 			<a href="mailto:{value}">{value}</a>
 		{/if}
-	{:else}
-		<p class="text-lg">what{key}</p>
-		<p>
-			what is this
-			{value}
-		</p>
 	{/if}
 {/each}
 
