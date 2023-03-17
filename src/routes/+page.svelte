@@ -1,6 +1,9 @@
 <script>
 	import { base } from "$app/paths";
-	import { sections } from "$lib/data.js";
+	import { sections, listOfCompanies } from "$lib/data.js";
+	import { test_data } from "$lib/parse.js";
+
+	import Company from "$lib/Company.svelte";
 
 	let showCompaniesInClassroom = {
 		A211: false,
@@ -10,18 +13,91 @@
 	};
 
 	function showCompanies(key) {
-		showCompaniesInClassroom = Object.entries(showCompaniesInClassroom).map(
-			(object) => (object[1] = false)
-		);
-		console.log(showCompaniesInClassroom.key);
-		showCompaniesInClassroom[key] = true;
+		// showCompaniesInClassroom = Object.entries(showCompaniesInClassroom).map(
+		// 	(object) => (object[1] = false)
+		// );
+		// console.log(showCompaniesInClassroom.key);
+		showCompaniesInClassroom[key] = !showCompaniesInClassroom[key];
 		return true;
 	}
+
+	function parseData(inputArray, i) {
+		const lines = inputArray[i]
+			.split("\n")
+			.map((line) => line.trim())
+			.filter((line) => line.length > 0);
+
+		const obj = {};
+		let currentKey = "";
+		let currentArray = [];
+
+		lines.forEach((line) => {
+			if (line.endsWith(":")) {
+				// we have a new key
+				currentKey = line.slice(0, -1);
+
+				if (currentKey === "Om oss/att jobba hos oss") {
+				} else if (currentKey === "Mer om oss") {
+					// special case for 'Mer om oss' with three keys and empty values
+					obj[currentKey] = {
+						"Se företagsfilm": "",
+						Webbsida: "",
+						LinkedIn: "",
+					};
+				} else if (
+					currentKey === "Vi är intresserade av dig som studerar" ||
+					currentKey === "Vi är intresserade av att"
+				) {
+					// start a new array for these keys
+					currentArray = [];
+					obj[currentKey] = currentArray;
+				} else {
+					// create a new key with an empty string value
+					obj[currentKey] = "";
+				}
+			} else {
+				// we have a value for the current key
+
+				if (currentKey === "Om oss/att jobba hos oss") {
+					obj[currentKey] = line;
+				} else if (currentKey === "Mer om oss") {
+					if (line.includes("Se företagsfilm")) {
+						obj[currentKey]["Se företagsfilm"] = line.slice(line.indexOf("(") + 1, -1);
+					} else if (line.includes("Webbsida")) {
+						obj[currentKey]["Webbsida"] = line.slice(line.indexOf("(") + 1, -1);
+					} else if (line.includes("LinkedIn")) {
+						obj[currentKey]["LinkedIn"] = line.slice(line.indexOf("(") + 1, -1);
+					}
+					// obj[currentKey][line] = "";
+				} else if (
+					currentKey === "Vi är intresserade av dig som studerar" ||
+					currentKey === "Vi är intresserade av att"
+				) {
+					// add value to current array
+					if (!obj[currentKey]) {
+						obj[currentKey] = [];
+					}
+					obj[currentKey].push(line);
+				} else if (currentKey === "Kompetenser vi värdesätter extra/letar efter") {
+					obj[currentKey] = line.split(",").map((s) => s.trim());
+				} else if (currentKey === "Kontakta mig om du har frågor") {
+					obj[currentKey] += line;
+				}
+			}
+		});
+		return obj;
+	}
+	let allCompanies = [];
+	listOfCompanies.forEach((name, i) => {
+		allCompanies[name] = parseData(test_data, i);
+	});
+
+	console.log(allCompanies);
 </script>
 
-<main class="flex flex-col [&>*]:m-4">
-	<div class="w-64 items-center [&>*]:m-2">
-		{#each Object.entries(sections) as [sectionKey, sectionValue]}
+<main class="flex flex-row [&>*]:m-4">
+	<div class="flex w-40 flex-col [&>*]:m-2">
+		{#each Object.entries(sections) as [sectionKey, sectionValue], i}
 			<div>
 				{#each sectionValue as classrooms}
 					{#each Object.entries(classrooms) as [classroom, companies]}
@@ -30,8 +106,9 @@
 								showCompanies(classroom);
 								console.log(classroom);
 							}}
-							class="self-center m-2 rounded-md bg-amber-400 p-2 hover:bg-amber-300"
-							>{classroom}</button>
+							class:a-button={i === 0}
+							class:b-button={i === 1}
+							class:c-button={i === 2}>{classroom}</button>
 						<div class="divide-y-1">
 							{#if showCompaniesInClassroom[classroom]}
 								{#each companies as company}
@@ -46,6 +123,9 @@
 			</div>
 		{/each}
 	</div>
+	<article>
+		<Company name={listOfCompanies[0]} companyData={allCompanies[listOfCompanies[0]]} />
+	</article>
 </main>
 
 <footer class="m-4 h-64">
@@ -57,3 +137,15 @@
 			><img class="inline w-6" src="Henrik.png" alt="avatar" />henrikvilhelmberglund</a>
 	</p>
 </footer>
+
+<style>
+	.a-button {
+		@apply hover-bg-amber-300 m-2 self-start rounded-md bg-amber-400 p-2;
+	}
+	.b-button {
+		@apply hover-bg-blue-300 m-2 self-start rounded-md bg-blue-400 p-2;
+	}
+	.c-button {
+		@apply hover-bg-red-300 m-2 self-start rounded-md bg-red-400 p-2;
+	}
+</style>
