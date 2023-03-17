@@ -89,7 +89,7 @@
 							obj[currentKey] = [];
 						}
 						obj[currentKey].push(line);
-					} else if (currentKey === "Kompetenser vi värdesätter extra/letar efter") {
+					} else if (currentKey.includes("Kompetenser vi värdesätter")) {
 						obj[currentKey] += line;
 					} else if (currentKey.includes("Du kan kontakta mig om du har några frågor")) {
 						obj[currentKey] += line;
