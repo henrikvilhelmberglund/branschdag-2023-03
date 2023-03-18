@@ -44,7 +44,11 @@
 		{#if showMore}
 			<div class="flex-col">
 				{#each Object.entries(value) as [linkType, link]}
-					<a class="underline-2 underline-solid underline-blue underline" href={link}>{linkType}</a>
+					<!-- check if link actually is something  -->
+					{#if link}
+						<a class="underline-2 underline-solid underline-blue underline" href={link}
+							>{linkType}</a>
+					{/if}
 				{/each}
 			</div>
 		{/if}
@@ -76,8 +80,9 @@
 	{/if}
 	{#if key.includes("kontakta mig om du har") || key.includes("Kontakta mig om du har")}
 		{#if showContact}
-			<a class="break-all underline-2 underline-solid underline-blue underline" href="mailto:{value}"
-				>{value}</a>
+			<a
+				class="underline-2 underline-solid underline-blue break-all underline"
+				href="mailto:{value}">{value}</a>
 		{/if}
 	{/if}
 {/each}
