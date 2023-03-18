@@ -85,7 +85,8 @@ export const listOfCompanies = [
 	"Kommando",
 	"Lantmännen",
 	"Länsförsäkringar",
-	"MagiCAD",
+	// below is missing in main list
+	// "MagiCAD",
 	"Mestro",
 	"MSB",
 	// Nordlo not in alphabetical order
