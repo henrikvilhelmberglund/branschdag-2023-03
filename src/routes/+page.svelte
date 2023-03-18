@@ -27,6 +27,8 @@
 		// A218: false,
 	};
 
+	let toggledClassrooms = {};
+
 	let viewCompany = "";
 	let viewCompanyName = "";
 
@@ -239,10 +241,14 @@
 						on:click={() => {
 							showCompanies(classroom);
 							console.log(classroom);
+							toggledClassrooms[classroom] = !toggledClassrooms[classroom];
 						}}
 						class:a-button={i === 0}
 						class:b-button={i === 1}
-						class:c-button={i === 2}>{classroom}</button>
+						class:c-button={i === 2}
+						class:toggled-classroom-a={toggledClassrooms[classroom] && i === 0}
+						class:toggled-classroom-b={toggledClassrooms[classroom] && i === 1}
+						class:toggled-classroom-c={toggledClassrooms[classroom] && i === 2}>{classroom}</button>
 					<div class="[&>*]:m-1">
 						{#if showCompaniesInClassroom[classroom]}
 							{#each companies as company}
@@ -301,5 +307,14 @@
 	}
 	.viewed-company {
 		@apply rounded-md border border-solid border-black bg-green-400 p-2;
+	}
+	.toggled-classroom-a {
+		@apply outline-amber-700 outline-solid outline-2;
+	}
+	.toggled-classroom-b {
+		@apply outline-blue-700 outline-solid outline-2;
+	}
+	.toggled-classroom-c {
+		@apply outline-red-700 outline-solid outline-2;
 	}
 </style>
