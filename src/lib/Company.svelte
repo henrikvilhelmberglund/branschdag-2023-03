@@ -1,6 +1,7 @@
 <script>
 	export let companyData;
 	export let name;
+	export let where;
 
 	let showAbout = false;
 	let showMore = false;
@@ -12,6 +13,9 @@
 </script>
 
 <h1 class="text-xl">{name}</h1>
+{#if where}
+	<h2 class="text-sm">{where}</h2>
+{/if}
 {#each Object.entries(companyData) as [key, value]}
 	<button
 		on:click={() => {

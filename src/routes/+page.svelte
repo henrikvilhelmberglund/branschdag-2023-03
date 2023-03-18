@@ -5,6 +5,21 @@
 
 	import Company from "$lib/Company.svelte";
 
+	$: whereIsTheCompany = findCompany(sections, viewCompanyName);
+
+	function findCompany(sections, companyName) {
+		for (const section in sections) {
+			for (const subSection of sections[section]) {
+				for (const key in subSection) {
+					if (subSection[key].includes(companyName)) {
+						return key;
+					}
+				}
+			}
+		}
+		return null;
+	}
+
 	let showCompaniesInClassroom = {
 		// A211: false,
 		// A214: false,
@@ -19,18 +34,18 @@
 	/** @type {import('./$types').Snapshot<string>} */
 	export const snapshot = {
 		capture: () => {
-      return {
-      showCompaniesInClassroom: showCompaniesInClassroom,
-      viewCompany: viewCompany,
-      viewCompanyName: viewCompanyName,
-    };
-  },
-  restore: (obj) => {
-    showCompaniesInClassroom = obj.showCompaniesInClassroom;
-    viewCompany = obj.viewCompany;
-    viewCompanyName = obj.viewCompanyName;
-  },
-};
+			return {
+				showCompaniesInClassroom: showCompaniesInClassroom,
+				viewCompany: viewCompany,
+				viewCompanyName: viewCompanyName,
+			};
+		},
+		restore: (obj) => {
+			showCompaniesInClassroom = obj.showCompaniesInClassroom;
+			viewCompany = obj.viewCompany;
+			viewCompanyName = obj.viewCompanyName;
+		},
+	};
 
 	function showCompanies(key) {
 		// showCompaniesInClassroom = Object.entries(showCompaniesInClassroom).map(
@@ -82,7 +97,7 @@
 
 					if (currentKey === "Om oss/att jobba hos oss") {
 						obj[currentKey] = line;
-					} else if (currentKey.includes("Mer om oss") || currentKey.includes("mer om oss") ) {
+					} else if (currentKey.includes("Mer om oss") || currentKey.includes("mer om oss")) {
 						if (line.includes("företagsfilm") || line.includes("Företagsfilm")) {
 							obj[currentKey]["Se företagsfilm"] = line.slice(line.indexOf("(") + 1, -1);
 						}
@@ -99,7 +114,10 @@
 							obj[currentKey]["LinkedIn"] = line.slice(line.indexOf("(") + 1, -1);
 						}
 						if (line.includes("Rörlig företagspresentation")) {
-							obj[currentKey]["Rörlig företagspresentation"] = line.slice(line.indexOf("(") + 1, -1);
+							obj[currentKey]["Rörlig företagspresentation"] = line.slice(
+								line.indexOf("(") + 1,
+								-1
+							);
 						}
 						// obj[currentKey][line] = "";
 					} else if (
@@ -174,7 +192,7 @@
 	<article class="[&>*]:m-2">
 		<!-- {JSON.stringify(viewCompany)} -->
 		<!-- {allCompanies["Accigo"]} -->
-		<Company name={viewCompanyName} companyData={viewCompany} />
+		<Company where={whereIsTheCompany} name={viewCompanyName} companyData={viewCompany} />
 	</article>
 </main>
 
