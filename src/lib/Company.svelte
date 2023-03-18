@@ -16,7 +16,6 @@
 	});
 </script>
 
-{JSON.stringify(enabled)}
 <h1 class="text-xl">{name}</h1>
 {#if where}
 	<h2 class="text-sm">{where}</h2>
