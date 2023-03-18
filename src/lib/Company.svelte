@@ -88,12 +88,12 @@
 				<a
 					class="underline-2 underline-solid underline-blue break-all underline"
 					href="mailto:{value}">{value}</a>
+			{:else}
+				<a
+					class="underline-2 underline-solid underline-blue break-all underline"
+					href="mailto:{value.split('(')[0]}">{value.split("(")[0]}</a>
+				<p>({value.split("(")[1]}</p>
 			{/if}
-		{:else}
-			<a
-				class="underline-2 underline-solid underline-blue break-all underline"
-				href="mailto:{value.split('(')[0]}">{value.split("(")[0]}</a>
-			<p>({value.split("(")[1]}</p>
 		{/if}
 	{/if}
 {/each}
