@@ -66,9 +66,10 @@
 					if (currentKey === "Om oss/att jobba hos oss") {
 						obj[currentKey] = line;
 					} else if (currentKey === "Mer om oss") {
-						if (line.includes("Se företagsfilm")) {
+						if (line.includes("företagsfilm") || line.includes("Företagsfilm")) {
 							obj[currentKey]["Se företagsfilm"] = line.slice(line.indexOf("(") + 1, -1);
-						} else if (line.includes("Webbsida")) {
+						}
+						if (line.includes("Webbsida")) {
 							if (line.includes("Webbsida1")) {
 								obj[currentKey]["Webbsida1"] = line.slice(line.indexOf("(") + 1, -1);
 							} else if (line.includes("Webbsida2")) {
@@ -76,7 +77,8 @@
 							} else {
 								obj[currentKey]["Webbsida"] = line.slice(line.indexOf("(") + 1, -1);
 							}
-						} else if (line.includes("LinkedIn")) {
+						}
+						if (line.includes("LinkedIn")) {
 							obj[currentKey]["LinkedIn"] = line.slice(line.indexOf("(") + 1, -1);
 						}
 						// obj[currentKey][line] = "";
