@@ -1,7 +1,8 @@
 export const sections = {
 	A: [
 		{
-			A211: ["Länsförsäkringar", "Signup Software", "Svensk Driftpartner", "Xlent"],
+			// SignUp Software was spelled Signup Software in name list
+			A211: ["Länsförsäkringar", "SignUp Software", "Svensk Driftpartner", "Xlent"],
 		},
 		{
 			A214: ["Vobling", "Voyado", "Warpin Media", "Swedbank"],
@@ -99,8 +100,7 @@ export const listOfCompanies = [
 	"Releye",
 	"Sebratec",
 	"Sharpness AB",
-	// Signup Software was spelt Signup software
-	"Signup Software",
+	"SignUp Software",
 	"Sopra Steria",
 	"Substorm",
 	"Svensk Driftpartner",
