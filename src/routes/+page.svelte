@@ -73,12 +73,14 @@
 				showCompaniesInClassroom: showCompaniesInClassroom,
 				viewCompany: viewCompany,
 				viewCompanyName: viewCompanyName,
+				selectedDropdown: selectedDropdown,
 			};
 		},
 		restore: (obj) => {
 			showCompaniesInClassroom = obj.showCompaniesInClassroom;
 			viewCompany = obj.viewCompany;
 			viewCompanyName = obj.viewCompanyName;
+			selectedDropdown = obj.selectedDropdown;
 		},
 	};
 
@@ -177,7 +179,8 @@
 						obj[currentKey] += line;
 					} else if (
 						currentKey.includes("kontakta mig om du har några frågor") ||
-						currentKey.includes("Kontakta mig om du har några frågor")
+						currentKey.includes("Kontakta mig om du har några frågor") ||
+						currentKey.includes("Kontakta mig om du har frågor")
 					) {
 						obj[currentKey] += line;
 					}
