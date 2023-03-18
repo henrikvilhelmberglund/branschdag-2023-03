@@ -230,7 +230,6 @@
 		<option value={dropdownOption}>{dropdownOption}</option>
 	{/each}
 </select>
-{enabledThingies}
 <main class="flex w-40  flex-row">
 	{#each Object.entries(sections) as [sectionKey, sectionValue], i}
 		<div>
