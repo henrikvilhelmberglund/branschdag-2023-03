@@ -19,7 +19,7 @@
 			enabled[key] =
 				key === "Om oss/att jobba hos oss"
 					? (showAbout = !showAbout)
-					: key === "Mer om oss"
+					: key.includes("Mer om oss") || key.includes("mer om oss")
 					? (showMore = !showMore)
 					: key === "Vi är intresserade av dig som studerar"
 					? (showStudentsWeAreInterestedIn = !showStudentsWeAreInterestedIn)
@@ -40,7 +40,7 @@
 			</p>
 		{/if}
 	{/if}
-	{#if key === "Mer om oss"}
+	{#if key.includes("Mer om oss") || key.includes("mer om oss")}
 		{#if showMore}
 			<div class="flex-col">
 				{#each Object.entries(value) as [linkType, link]}

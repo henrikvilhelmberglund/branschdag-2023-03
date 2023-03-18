@@ -42,7 +42,7 @@
 					currentKey = line.slice(0, -1);
 
 					if (currentKey === "Om oss/att jobba hos oss") {
-					} else if (currentKey === "Mer om oss") {
+					} else if (currentKey.includes("Mer om oss") || currentKey.includes("mer om oss")) {
 						// special case for 'Mer om oss' with three keys and empty values
 						obj[currentKey] = {
 							"Se företagsfilm": "",
@@ -65,7 +65,7 @@
 
 					if (currentKey === "Om oss/att jobba hos oss") {
 						obj[currentKey] = line;
-					} else if (currentKey === "Mer om oss") {
+					} else if (currentKey.includes("Mer om oss") || currentKey.includes("mer om oss") ) {
 						if (line.includes("företagsfilm") || line.includes("Företagsfilm")) {
 							obj[currentKey]["Se företagsfilm"] = line.slice(line.indexOf("(") + 1, -1);
 						}
@@ -93,7 +93,10 @@
 						obj[currentKey].push(line);
 					} else if (currentKey.includes("Kompetenser vi värdesätter")) {
 						obj[currentKey] += line;
-					} else if (currentKey.includes("kontakta mig om du har några frågor") || currentKey.includes("Kontakta mig om du har några frågor")) {
+					} else if (
+						currentKey.includes("kontakta mig om du har några frågor") ||
+						currentKey.includes("Kontakta mig om du har några frågor")
+					) {
 						obj[currentKey] += line;
 					}
 				}
