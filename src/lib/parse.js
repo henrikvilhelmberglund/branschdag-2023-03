@@ -1,27 +1,27 @@
 export const test_data = {
 	Accigo: `Accigo
-Om oss/att jobba hos oss:
-Framgång utan chefer Vi har valt att inte ha några chefer eller traditionella hierarkier, utan jobbar med något vi kallar för Kollektivt ledarskap. Det betyder att vi lägger ansvaret och möjligheterna hos oss själva. Ambitionen hos varje enskild individ är det som skapar gemensam framdrift och utveckling. När du kommer till Accigo möts du av ett kontor som bubblar av energi och professionalism. Här träffar du glada, innovativa och omtänksamma kollegor som gärna pausar en stund vid kaffemaskinen för att socialisera och bygga sitt personliga nätverk. Vi har hittat den där magiska mixen av glädje, energi och entreprenörsanda som många söker men få finner.
+  Om oss/att jobba hos oss:
+  Framgång utan chefer Vi har valt att inte ha några chefer eller traditionella hierarkier, utan jobbar med något vi kallar för Kollektivt ledarskap. Det betyder att vi lägger ansvaret och möjligheterna hos oss själva. Ambitionen hos varje enskild individ är det som skapar gemensam framdrift och utveckling. När du kommer till Accigo möts du av ett kontor som bubblar av energi och professionalism. Här träffar du glada, innovativa och omtänksamma kollegor som gärna pausar en stund vid kaffemaskinen för att socialisera och bygga sitt personliga nätverk. Vi har hittat den där magiska mixen av glädje, energi och entreprenörsanda som många söker men få finner.
 
-Mer om oss:
-Se företagsfilm (https://www.youtube.com/watch?v=lqn-bVNZFAs)
-Webbsida (https://karriar.accigo.se/)
-LinkedIn (https://www.linkedin.com/company/accigo/mycompany/  )
+  Mer om oss:
+  Se företagsfilm (https://www.youtube.com/watch?v=lqn-bVNZFAs)
+  Webbsida (https://karriar.accigo.se/)
+  LinkedIn (https://www.linkedin.com/company/accigo/mycompany/  )
 
-Vi är intresserade av dig som studerar:
-Business Intelligence – analytiker
-DevOps Engineer
-IT-infrastrukturspecialist
-IT-säkerhetstekniker
-Pythonutvecklare inom AI
+  Vi är intresserade av dig som studerar:
+  Business Intelligence – analytiker
+  DevOps Engineer
+  IT-infrastrukturspecialist
+  IT-säkerhetstekniker
+  Pythonutvecklare inom AI
 
-Vi är intresserade av att:
-Ta emot studenter på LIA 2022
-Anställa studenter efter examen
+  Vi är intresserade av att:
+  Ta emot studenter på LIA 2022
+  Anställa studenter efter examen
 
-Kompetenser vi värdesätter extra/letar efter:
-Ambitionsdriven, konsultmässig, teknikintresserad
-`,
+  Kompetenser vi värdesätter extra/letar efter:
+  Ambitionsdriven, konsultmässig, teknikintresserad
+  `,
 	Addpro: `Addpro
   Om oss/att jobba hos oss:
   På AddPro utmanar vi våra kunder inom alla områden som krävs för digital transformation; Advisory, Business Solutions & Applications, Cloud & Infrastructure och Cybersecurity. Våra managerade tjänster sträcker sig över ett mycket brett område och täcker allt från avancerad modern molnbaserad SOC, applikations- och serverdrift till högkompetent servicedesk för slutanvändare och deras enheter. Hos AddPro finns inga stora egon eller magiker. Vår superkraft är att lyssna noga, lösa kundernas 1000-bitars pussel och kavla upp ärmarna för ett seriöst dedikerat arbete. Vi ifrågasätter det förväntade och utvecklar lösningar som tar våra kunder, och oss själva, flera steg längre. Vi kallar oss the A-Team och precis som the Avengers går vi alltid all-in och stöttar våra kollegor när de behöver det som mest.
@@ -376,7 +376,6 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   Vi är intresserade av att:
   Anställa studenter efter examen till vårt traineeprogram
   
-  Kontakta mig om du har frågor
   Du kan kontakta mig om du har några frågor:
   Isabelle.dannebrant@forsakringskassan.se`,
 	"Grant Thorton": `Grant Thorton
@@ -448,7 +447,6 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   
    
   
-  Kontakta mig om du har frågor
   Du kan kontakta mig om du har några frågor:
   michael@inadra.se
   `,
@@ -474,7 +472,6 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   
    
   
-  Kontakta mig om du har frågor
   Du kan kontakta mig om du har några frågor:
   wiveka.soderberg@innofactor.com
   `,
@@ -506,7 +503,6 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   Kompetenser vi värdesätter extra/letar efter:
   Engagemang och nyfikenhet
   
-  Kontakta mig om du har frågor
   Du kan kontakta mig om du har några frågor:
   marian.alvarez@kommando.se
   `,
@@ -538,7 +534,6 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   
    
   
-  Kontakta mig om du har frågor
   Du kan kontakta mig om du har några frågor:
   johanna.nyren@lantmannen.com `,
 	Länsförsäkringar: `Länsförsäkringar
@@ -573,7 +568,6 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   
    
   
-  Kontakta mig om du har frågor
   Du kan kontakta mig om du har några frågor eller vill skicka in en spontansökan med CV och presentation:
   Isabell.molander@lansforsakringar.se`,
 	Mestro: `Mestro
@@ -599,7 +593,6 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   
   Hos oss är tröskeln låg och vi utvecklas gärna tillsammans med dig. Vi jobbar med Java och SQL i backend och Typescript i frontend och ser att du helst har erfarenhet av något av detta. Kan du dessutom något om Microsoft Azure eller React är det självklart meriterande. Som person är du positiv, självgående och villig att lära + testa nytt. Redo för en ny utmaning hos oss?
   
-  Kontakta mig om du har frågor
   Du kan kontakta mig om du har några frågor:
   kristoffer@mestro.se
   `,
@@ -656,7 +649,6 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   
    
   
-  Kontakta mig om du har frågor
   Du kan kontakta mig om du har några frågor:
   lovisa.johansson@nordlo.com
   `,
@@ -679,7 +671,7 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   
   Kompetenser som vi värdesätter extra mycket är Cloud Architects / Cloud Engineers
   
-  Kontakta mig om du har frågor
+  Kontakta mig om du har frågor:
   Mathias Gutehall
   mathias.gutehall@nordcloud.com
   
@@ -724,7 +716,6 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   
    
   
-  Kontakta mig om du har frågor
   Du kan kontakta mig om du har några frågor:
   emelie.aslin@basefarm-orange.com
   `,
@@ -751,7 +742,6 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   Ta emot LIA-praktikanter under 2022 och/eller 2023
   Anställa studenter efter examen
   
-  Kontakta mig om du har frågor
   Kontakta mig om du har frågor:
   henrik.svegby@prevas.se
   `,
@@ -786,7 +776,6 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   Ta emot LIA-praktikanter under 2022 och/eller 2023
   Anställa studenter efter examen
   
-  Kontakta mig om du har frågor
   Kontakta mig om du har frågor:
   student.it-avdelningen@polisen.se
   `,
@@ -810,41 +799,39 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   Ta emot LIA-praktikanter under 2022 och/eller 2023
   Anställa studenter efter examen
   
-  Kontakta mig om du har frågor
   Kontakta mig om du har frågor:
   cecilia.landin@releye.se
   `,
 	Sebratec: `
   Sebratec
-Om oss/att jobba hos oss:
-Sebratec är ett mjukvaru- och ingenjörsföretag specialiserat på tjänster för teknikindustrin. Vi levererar expertis till våra kunder och hjälper yrkesverksamma inom IT-sektorn att nå nästa utmaning i sin karriär. Vårt mål är att skapa en bro mellan konsulter och företag och leverera konsulttjänster, offshore- och interna tjänster.
+  Om oss/att jobba hos oss:
+  Sebratec är ett mjukvaru- och ingenjörsföretag specialiserat på tjänster för teknikindustrin. Vi levererar expertis till våra kunder och hjälper yrkesverksamma inom IT-sektorn att nå nästa utmaning i sin karriär. Vårt mål är att skapa en bro mellan konsulter och företag och leverera konsulttjänster, offshore- och interna tjänster.
 
-Mer om oss:
-Webbsida (https://sebratec.com/)
+  Mer om oss:
+  Webbsida (https://sebratec.com/)
 
-Vi är intresserade av dig som studerar:
-Data Engineer
-DevOps Engineer
-Frontend-utvecklare
-Javautvecklare
-Mjukvaruutvecklare, Inbyggda system och IoT
-IT-infrastrukturspecialist
-Kvalitetssäkrare och testare inom IT
-Programutvecklare .NET
-Webbutvecklare .NET
-Pythonutvecklare inom AI
-UX-designer
-Webbutvecklare fullstack open source
+  Vi är intresserade av dig som studerar:
+  Data Engineer
+  DevOps Engineer
+  Frontend-utvecklare
+  Javautvecklare
+  Mjukvaruutvecklare, Inbyggda system och IoT
+  IT-infrastrukturspecialist
+  Kvalitetssäkrare och testare inom IT
+  Programutvecklare .NET
+  Webbutvecklare .NET
+  Pythonutvecklare inom AI
+  UX-designer
+  Webbutvecklare fullstack open source
 
- 
+  
 
-Vi är intresserade av att:
-Ta emot LIA-praktikanter under 2022 och/eller 2024
-Anställa studenter efter examen
+  Vi är intresserade av att:
+  Ta emot LIA-praktikanter under 2022 och/eller 2024
+  Anställa studenter efter examen
 
-Kontakta mig om du har frågor
-Kontakta mig om du har frågor:
-maria@sebratec.com
+  Kontakta mig om du har frågor:
+  maria@sebratec.com
 `,
 	"Sharpness AB": `Sharpness AB
   Om oss/att jobba hos oss:
@@ -948,32 +935,31 @@ maria@sebratec.com
   `,
 	"Sopra Steria": `
   Sopra Steria
-Om oss/att jobba hos oss:
-Sopra Steria är ett ledande internationellt konsultföretag inom IT, management och design med en av marknadens mest omfattande tjänsteportföljer. Vi bygger samhället genom innovativa digitala lösningar och erbjuder allt från dataanalys, affärs- och verksamhetsutveckling via projekt- och förändringsledning till systemutveckling, testning, driftsättning och daglig förvaltning av IT-system. Med kunskap och erfarenheter från många olika branscher och med hög teknisk kompetens, hjälper vi privata och offentliga organisationer att ta ett digitalt ledarskap. 2023 utsågs vi till Karriärföretag och en av Sveriges bästa arbetsplatser 2022. Gartner har också listat oss som ett topp 5 bolag inom digital transformation.
+  Om oss/att jobba hos oss:
+  Sopra Steria är ett ledande internationellt konsultföretag inom IT, management och design med en av marknadens mest omfattande tjänsteportföljer. Vi bygger samhället genom innovativa digitala lösningar och erbjuder allt från dataanalys, affärs- och verksamhetsutveckling via projekt- och förändringsledning till systemutveckling, testning, driftsättning och daglig förvaltning av IT-system. Med kunskap och erfarenheter från många olika branscher och med hög teknisk kompetens, hjälper vi privata och offentliga organisationer att ta ett digitalt ledarskap. 2023 utsågs vi till Karriärföretag och en av Sveriges bästa arbetsplatser 2022. Gartner har också listat oss som ett topp 5 bolag inom digital transformation.
 
-Läs mer om oss här:
-Webbsida (https://www.soprasteria.se/)
-LinkedIn (https://www.linkedin.com/company/soprasteria/mycompany/)
-Rörlig företagspresentation (https://www.youtube.com/watch?v=5za5c1Zet28)
+  Läs mer om oss här:
+  Webbsida (https://www.soprasteria.se/)
+  LinkedIn (https://www.linkedin.com/company/soprasteria/mycompany/)
+  Rörlig företagspresentation (https://www.youtube.com/watch?v=5za5c1Zet28)
 
-Vi är intresserade av dig som studerar:
-DevOps Engineer
-Javautvecklare
-Kvalitetssäkrare och testare inom IT
-Programutvecklare .NET
-Webbutvecklare .NET
-UX-designer
-Frontend-utvecklare
+  Vi är intresserade av dig som studerar:
+  DevOps Engineer
+  Javautvecklare
+  Kvalitetssäkrare och testare inom IT
+  Programutvecklare .NET
+  Webbutvecklare .NET
+  UX-designer
+  Frontend-utvecklare
 
-Vi är intresserade av att:
-Vi är intresserade av att ta emot dig som söker LIA-praktik under HT23 och VT24 med ambitionen att det ska leda till anställning.
+  Vi är intresserade av att:
+  Vi är intresserade av att ta emot dig som söker LIA-praktik under HT23 och VT24 med ambitionen att det ska leda till anställning.
 
-Rekryteringsprocessen för LIA HT 2023 kommer att påbörjas april 2023, och processen för LIA VT 2024 påbörjas augusti 2023. Om din profil är relevant för det vi söker kommer du att kontaktas längre fram med mer information gällande processen.
+  Rekryteringsprocessen för LIA HT 2023 kommer att påbörjas april 2023, och processen för LIA VT 2024 påbörjas augusti 2023. Om din profil är relevant för det vi söker kommer du att kontaktas längre fram med mer information gällande processen.
 
-Kontakta mig om du har frågor
-Kontakta mig om du har frågor:
-agnes.hedlund@soprasteria.com
-hanna.korell@soprasteria.com
+  Kontakta mig om du har frågor:
+  agnes.hedlund@soprasteria.com
+  hanna.korell@soprasteria.com
 `,
 	Substorm: `Substorm
   Om oss/att jobba hos oss:
@@ -995,7 +981,6 @@ hanna.korell@soprasteria.com
   Kompetenser som vi värdesätter extra mycket är:
   Kompetenser som vi värdesätter lite extra är om du som person är självgående, initiativrik, lösningsorienterad och omtänksam. Du kan förklara affärsnytta och affärsnytta med dina idéer och lösningar på ett professionellt sätt. Som person är du också prestigelös, vill hjälpa andra och är alltid redo att lära dig nya tekniker och färdigheter.
   
-  Kontakta mig om du har frågor
   Kontakta mig om du har frågor:
   Jonna Hillblom hello@substorm.ai
   
@@ -1016,7 +1001,6 @@ hanna.korell@soprasteria.com
   Vi är intresserade av att:
   Anställa studenter efter examen
   
-  Kontakta mig om du har frågor
   Kontakta mig vid frågor:
   Mathilda Syrén`,
 	Swedbank: `Swedbank
@@ -1041,7 +1025,6 @@ hanna.korell@soprasteria.com
   
   Som LIA-student kommer du inom kort även ha möjlighet att söka till vårt Internship-program samtidigt som du fullföljer din LIA. Detta mynnar förhoppningsvis ut i en anställning hos oss.
   
-  Kontakta mig om du har frågor
   Kontakta mig om du har några frågor:
   Fredrik Dahlström
   tm.markets@swedbank.se
@@ -1097,7 +1080,6 @@ hanna.korell@soprasteria.com
   Kompetenser vi värdesätter extra/letar efter:
   Relationsbyggande, lösningsorienterad, resultatorienterad, strukturerad
   
-  Kontakta mig om du har frågor
 `,
 	Truesec: `Truesec
   Om oss/att jobba hos oss:
@@ -1120,7 +1102,6 @@ hanna.korell@soprasteria.com
   Kompetenser som vi värdesätter extra mycket är:
   Vi ser gärna att du har egna projekt som du gjort utanför utbildningen. Du som verkligen har ett intresse av IT och IT-säkerhet och vill vara omgiven av likasinnade. På Truesec är kunskapsöverföring och viljan att hjälpa sina kollegor framåt något som vi värdesätter högt!
   
-  Kontakta mig om du har frågor
   `,
 	Tutus: `Tutus
   Om oss/att jobba hos oss:
@@ -1144,7 +1125,6 @@ hanna.korell@soprasteria.com
   Kompetenser som vi värdesätter extra mycket är:
   Nätverkssäkerhet, C, Kryptering
   
-  Kontakta mig om du har frågor
   `,
 	Vattenfall: `Vattenfall
   Om oss/att jobba hos oss:
@@ -1172,31 +1152,28 @@ hanna.korell@soprasteria.com
   `,
 	Vobling: `
   Vobling
-Om oss/att jobba hos oss:
-Vobling has been providing leading edge XR services to some of the biggest companies in the world. From our inception, we have maintained a focus on applying these technologies where they offer solutions to real-world problems and where they generate business value. The dedication to high-impact solutions has led to a specialization in developing virtual reality training.
+  Om oss/att jobba hos oss:
+  Vobling has been providing leading edge XR services to some of the biggest companies in the world. From our inception, we have maintained a focus on applying these technologies where they offer solutions to real-world problems and where they generate business value. The dedication to high-impact solutions has led to a specialization in developing virtual reality training.
 
-Läs mer om oss här:
-Webbsida1 (http://www.vobling.com/)
-Webbsida2 (http://www.vrfiretrainer.com/)
-LinkedIn: (https://www.linkedin.com/company/vobling/)
-Rörlig företagspresentation (https://www.youtube.com/watch?v=QPrP9TUv22Y)
+  Läs mer om oss här:
+  Webbsida1 (http://www.vobling.com/)
+  Webbsida2 (http://www.vrfiretrainer.com/)
+  LinkedIn: (https://www.linkedin.com/company/vobling/)
+  Rörlig företagspresentation (https://www.youtube.com/watch?v=QPrP9TUv22Y)
 
-Vi är intresserade av dig som studerar:
-Frontend-utvecklare
-UX-designer
-Mjukvaruutvecklare, Inbyggda system och IoT
-Webbutvecklare fullstack open source
-Virtual Reality-utvecklare
+  Vi är intresserade av dig som studerar:
+  Frontend-utvecklare
+  UX-designer
+  Mjukvaruutvecklare, Inbyggda system och IoT
+  Webbutvecklare fullstack open source
+  Virtual Reality-utvecklare
 
-Vi är intresserade av att:
-Ta emot studenter på LIA 2022 och eller 2023
-Anställa studenter efter examen
+  Vi är intresserade av att:
+  Ta emot studenter på LIA 2022 och eller 2023
+  Anställa studenter efter examen
 
-Kontakta mig om du har frågor
-Bifoga CV och en kort presentation av dig och berätta varför du är intresserad av att göra din praktik eller att jobba hos oss. Vi kontaktar dig ifall din profil låter intressant. Jag vill göra en intresseanmälan »  
-
-Kontakta mig om du har några frågor:
-amanda.bengtsson@vobling.com
+  Kontakta mig om du har några frågor:
+  amanda.bengtsson@vobling.com
 `,
 	Voyado: `Voyado
   Om oss/att jobba hos oss:
@@ -1224,10 +1201,9 @@ amanda.bengtsson@vobling.com
   Kompetenser vi värdesätter extra/letar efter:
   .Net, Azure, Aurelia & TypeScript.
   
-  Kontakta mig om du har frågor
   Kontakta mig om du har några frågor:
   maria.wahlstrom@voyado.com
-  (se riktig webbsida för telefonnummer)
+  (obs: se riktig webbsida för telefonnummer)
   `,
 	"Warpin Media": `Warpin Media
   Om oss/att jobba hos oss:
@@ -1274,7 +1250,6 @@ amanda.bengtsson@vobling.com
   
    
   
-  Kontakta mig om du har frågor
   Kontakta mig om du har frågor:
   magnus.nordlund@xlent.se
   `,
