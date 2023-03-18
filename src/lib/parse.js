@@ -1029,7 +1029,11 @@ hanna.korell@soprasteria.com
   Webbsida (http://www.swedbank.se/)
   
   Vi är intresserade av dig som studerar:
-  Business Intelligence – analytiker DevOps Engineer IT-infrastrukturspecialist Kvalitetssäkrare och testare inom IT Javautvecklare
+  Business Intelligence – analytiker 
+  DevOps Engineer 
+  IT-infrastrukturspecialist 
+  Kvalitetssäkrare och testare inom IT 
+  Javautvecklare
   
   Vi är intresserade av att:
   Ta emot studenter på LIA 2022
@@ -1258,7 +1262,8 @@ amanda.bengtsson@vobling.com
   Rörlig företagspresentation (https://www.linkedin.com/company/-xlent/videos/)
   
   Vi är intresserade av dig som studerar:
-  Business Intelligence – analytiker Frontend-utvecklare
+  Business Intelligence – analytiker 
+  Frontend-utvecklare
   
   Vi är intresserade av att:
   Ta emot LIA-praktikanter under 2022 och/eller 2023
