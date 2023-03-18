@@ -13,7 +13,7 @@ Business Intelligence – analytiker
 DevOps Engineer
 IT-infrastrukturspecialist
 IT-säkerhetstekniker
-Pythonutvecklare för AI
+Pythonutvecklare inom AI
 
 Vi är intresserade av att:
 Ta emot studenter på LIA 2022
@@ -103,7 +103,7 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   
   Vi är intresserade av dig som studerar:
   Business Intelligence – analytiker
-  Data Engineers
+  Data Engineer
   
   Du kan kontakta mig om du har några frågor:
   dennis.fast@attollo.se
@@ -164,7 +164,7 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   LinkedIn (https://www.linkedin.com/company/box-bygg/mycompany/)
   
   Vi är intresserade av dig som studerar:
-  VR
+  Virtual Reality-utvecklare
   
   Vi är intresserade av att:
   Ta emot LIA-praktikanter under 2023 och/eller 2024
@@ -198,7 +198,7 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   Vi är intresserade av dig som studerar:
   Business Intelligence – analytiker
   Frontend-utvecklare
-  Mjukvaruutvecklare, Inbyggda system och IoT (Internet of Things-utvecklare
+  Mjukvaruutvecklare, Inbyggda system och IoT
   IT-infrastrukturspecialist
   Kvalitetssäkrare och testare inom IT
   Javautvecklare
@@ -301,7 +301,7 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   Business Intelligence – analytiker
   IT-säkerhetstekniker
   Javautvecklare
-  Programutvecklare.NET
+  Programutvecklare .NET
   Webbutvecklare fullstack open source
   Data Engineer
   
@@ -335,7 +335,7 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   Vi är intresserade av dig som studerar:
   Frontend-utvecklare
   IT-säkerhetstekniker
-  Webbutvecklare.NET
+  Webbutvecklare .NET
   
   Vi är intresserade av att:
   Anställa studenter efter examen
@@ -524,7 +524,7 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   Business Intelligence – analytiker
   Data Engineer
   Frontend-utvecklare
-  Mjukvaruutvecklare, inbyggda system och IoT
+  Mjukvaruutvecklare, Inbyggda system och IoT
   UX-designer
   Webbutvecklare .NET
   Webbutvecklare fullstack open source
@@ -558,7 +558,7 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   Business Intelligence – analytiker
   DevOps Engineer
   Frontend-utvecklare
-  Mjukvaruutvecklare, Inbyggda system och IoT (Internet of Things-utvecklare)
+  Mjukvaruutvecklare, Inbyggda system och IoT
   IT-infrastrukturspecialist
   Kvalitetssäkrare och testare inom IT
   Javautvecklare
@@ -615,7 +615,7 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   Data Engineer
   DevOps Engineer
   Frontend-utvecklare
-  Mjukvaruutvecklare, Inbyggda system och IoT (Internet of Things-utvecklare)
+  Mjukvaruutvecklare, Inbyggda system och IoT
   IT-infrastrukturspecialist
   Kvalitetssäkrare och testare inom IT
   Programutvecklare .NET
@@ -691,7 +691,8 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   
   Vi är intresserade av dig som studerar:
   Distans – IT-säkerhetstekniker
-  
+
+  Extra:
   kom och träffa oss!
   Hej,
   
@@ -740,9 +741,9 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   DevOps Engineer
   Javautvecklare
   UX-designer
-  Pythonutvecklare
-  Data engineer
-  Mjukvaruutvecklare inbyggda system och IOT.
+  Pythonutvecklare inom AI
+  Data Engineer
+  Mjukvaruutvecklare, Inbyggda system och IoT
   
    
   
@@ -826,7 +827,7 @@ Data Engineer
 DevOps Engineer
 Frontend-utvecklare
 Javautvecklare
-Mjukvaruutvecklare, Inbyggda system och IoT (Internet of Things-utvecklare)
+Mjukvaruutvecklare, Inbyggda system och IoT
 IT-infrastrukturspecialist
 Kvalitetssäkrare och testare inom IT
 Programutvecklare .NET
@@ -956,13 +957,12 @@ LinkedIn (https://www.linkedin.com/company/soprasteria/mycompany/)
 Rörlig företagspresentation (https://www.youtube.com/watch?v=5za5c1Zet28)
 
 Vi är intresserade av dig som studerar:
-DevOps engineer
+DevOps Engineer
 Javautvecklare
 Kvalitetssäkrare och testare inom IT
-Programvaruutvecklare .NET
+Programutvecklare .NET
 Webbutvecklare .NET
 UX-designer
-Kvalitetssäkare och testare
 Frontend-utvecklare
 
 Vi är intresserade av att:
@@ -1046,7 +1046,7 @@ hanna.korell@soprasteria.com
   Fredrik Dahlström
   tm.markets@swedbank.se
   `,
-	Tiotevry: `Tietoevry
+	Tietoevry: `Tietoevry
   Om oss/att jobba hos oss:
   Tietoevry creates purposeful technology that reinvents the world for good. We are a leading technology company with a strong Nordic heritage and global capabilities. Based on our core values of openness, trust and diversity, we?work with our customers to develop digital?futures?where businesses, societies, and humanity?thrive. Our 24,000 experts globally specialize in cloud, data, and software, serving thousands of enterprise and public-sector customers in more than 90 countries. Tietoevry’s annual turnover is approximately EUR 3 billion and the company’s shares are listed on the NASDAQ exchange in Helsinki and Stockholm, as well as on Oslo Børs. Creating purposeful technology to reinvent the world for good
   
@@ -1088,7 +1088,7 @@ hanna.korell@soprasteria.com
   Kvalitetssäkrare och testare inom IT
   Javautvecklare
   UX-designer
-  Webbutveckling.NET
+  Webbutvecklare .NET
   Webbutvecklare fullstack open source
   
   Vi är intresserade av att:
@@ -1133,7 +1133,7 @@ hanna.korell@soprasteria.com
   Vi är intresserade av dig som studerar:
   Data Engineer
   DevOps Engineer
-  Mjukvaruutvecklare, Inbyggda system och IoT (Internet of Things-utvecklare
+  Mjukvaruutvecklare, Inbyggda system och IoT
   IT-infrastrukturspecialist
   IT-säkerhetstekniker
   
@@ -1294,7 +1294,7 @@ amanda.bengtsson@vobling.com
   Business Intelligence – analytiker
   DevOps Engineer
   Frontend-utvecklare
-  Javautveckling
+  Javautvecklare
   Kvalitetssäkrare och testare inom IT
   Programutvecklare .NET
   UX-designer
