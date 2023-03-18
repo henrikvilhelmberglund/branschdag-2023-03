@@ -84,9 +84,16 @@
 	{/if}
 	{#if key.includes("kontakta mig om du har") || key.includes("Kontakta mig om du har")}
 		{#if showContact}
+			{#if !value.includes("(")}
+				<a
+					class="underline-2 underline-solid underline-blue break-all underline"
+					href="mailto:{value}">{value}</a>
+			{/if}
+		{:else}
 			<a
 				class="underline-2 underline-solid underline-blue break-all underline"
-				href="mailto:{value}">{value}</a>
+				href="mailto:{value.split('(')[0]}">{value.split("(")[0]}</a>
+			<p>({value.split("(")[1]}</p>
 		{/if}
 	{/if}
 {/each}
