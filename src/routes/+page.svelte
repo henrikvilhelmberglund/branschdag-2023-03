@@ -79,6 +79,7 @@
 				viewCompanyName: viewCompanyName,
 				selectedDropdown: selectedDropdown,
 				enabledThingies: enabledThingies,
+				toggledClassrooms: toggledClassrooms,
 			};
 		},
 		restore: (obj) => {
@@ -87,6 +88,7 @@
 			viewCompanyName = obj.viewCompanyName;
 			selectedDropdown = obj.selectedDropdown;
 			enabledThingies = obj.enabledThingies;
+			toggledClassrooms = obj.toggledClassrooms;
 		},
 	};
 
@@ -309,12 +311,12 @@
 		@apply rounded-md border border-solid border-black bg-green-400 p-2;
 	}
 	.toggled-classroom-a {
-		@apply outline-amber-700 outline-solid outline-2;
+		@apply outline-solid outline-2 outline-amber-700;
 	}
 	.toggled-classroom-b {
-		@apply outline-blue-700 outline-solid outline-2;
+		@apply outline-solid outline-2 outline-blue-700;
 	}
 	.toggled-classroom-c {
-		@apply outline-red-700 outline-solid outline-2;
+		@apply outline-solid outline-2 outline-red-700;
 	}
 </style>
