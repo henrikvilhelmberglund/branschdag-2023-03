@@ -15,6 +15,23 @@
 	let viewCompany = "";
 	let viewCompanyName = "";
 
+	// Sveltekit Snapshot
+	/** @type {import('./$types').Snapshot<string>} */
+	export const snapshot = {
+		capture: () => {
+      return {
+      showCompaniesInClassroom: showCompaniesInClassroom,
+      viewCompany: viewCompany,
+      viewCompanyName: viewCompanyName,
+    };
+  },
+  restore: (obj) => {
+    showCompaniesInClassroom = obj.showCompaniesInClassroom;
+    viewCompany = obj.viewCompany;
+    viewCompanyName = obj.viewCompanyName;
+  },
+};
+
 	function showCompanies(key) {
 		// showCompaniesInClassroom = Object.entries(showCompaniesInClassroom).map(
 		// 	(object) => (object[1] = false)
