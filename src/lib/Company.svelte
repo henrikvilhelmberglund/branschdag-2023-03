@@ -4,13 +4,6 @@
 	export let name;
 	export let where;
 
-	let showAbout = false;
-	let showMore = false;
-	let showStudentsWeAreInterestedIn = false;
-	let showInterestedIn = false;
-	let showLookingFor = false;
-	let showContact = false;
-	let showExtra = false;
 	let enabled = {};
 	export let enabledSnapshot = {};
 
@@ -23,6 +16,7 @@
 	});
 </script>
 
+{JSON.stringify(enabled)}
 <h1 class="text-xl">{name}</h1>
 {#if where}
 	<h2 class="text-sm">{where}</h2>
@@ -33,25 +27,25 @@
 			// reset();
 			enabled[key] =
 				key === "Om oss/att jobba hos oss"
-					? (showAbout = !showAbout)
+					? (enabled[key] = !enabled[key])
 					: key.includes("Mer om oss") || key.includes("mer om oss")
-					? (showMore = !showMore)
+					? (enabled[key] = !enabled[key])
 					: key === "Vi är intresserade av dig som studerar"
-					? (showStudentsWeAreInterestedIn = !showStudentsWeAreInterestedIn)
+					? (enabled[key] = !enabled[key])
 					: key === "Vi är intresserade av att"
-					? (showInterestedIn = !showInterestedIn)
+					? (enabled[key] = !enabled[key])
 					: key.includes("Kompetenser vi värdesätter")
-					? (showLookingFor = !showLookingFor)
+					? (enabled[key] = !enabled[key])
 					: key.includes("kontakta mig om du har") || key.includes("Kontakta mig om du har")
-					? (showContact = !showContact)
+					? (enabled[key] = !enabled[key])
 					: key.includes("Extra")
-					? (showExtra = !showExtra)
+					? (enabled[key] = !enabled[key])
 					: "";
 		}}
 		class="key"
 		class:toggled={enabled[key]}>{key}</button>
 	{#if key === "Om oss/att jobba hos oss"}
-		{#if showAbout}
+		{#if enabled[key]}
 			{#each value as line}
 				<p>
 					{line}
@@ -60,7 +54,7 @@
 		{/if}
 	{/if}
 	{#if key.includes("Mer om oss") || key.includes("mer om oss")}
-		{#if showMore}
+		{#if enabled[key]}
 			<div class="flex-col">
 				{#each Object.entries(value) as [linkType, link]}
 					<!-- check if link actually is something  -->
@@ -73,7 +67,7 @@
 		{/if}
 	{/if}
 	{#if key === "Vi är intresserade av dig som studerar"}
-		{#if showStudentsWeAreInterestedIn}
+		{#if enabled[key]}
 			{#each value as studentType}
 				<p>
 					{studentType}
@@ -82,7 +76,7 @@
 		{/if}
 	{/if}
 	{#if key === "Vi är intresserade av att"}
-		{#if showInterestedIn}
+		{#if enabled[key]}
 			{#each value as ourInterest}
 				<p>
 					{ourInterest}
@@ -91,14 +85,14 @@
 		{/if}
 	{/if}
 	{#if key.includes("Kompetenser vi värdesätter")}
-		{#if showLookingFor}
+		{#if enabled[key]}
 			<p>
 				{value}
 			</p>
 		{/if}
 	{/if}
 	{#if key.includes("kontakta mig om du har") || key.includes("Kontakta mig om du har")}
-		{#if showContact}
+		{#if enabled[key]}
 			{#each value as address}
 				{#if !value.includes("(")}
 					<a
@@ -114,7 +108,7 @@
 		{/if}
 	{/if}
 	{#if key.includes("Extra")}
-		{#if showExtra}
+		{#if enabled[key]}
 			<p>
 				{value}
 			</p>
