@@ -93,7 +93,7 @@
 						obj[currentKey].push(line);
 					} else if (currentKey.includes("Kompetenser vi värdesätter")) {
 						obj[currentKey] += line;
-					} else if (currentKey.includes("Du kan kontakta mig om du har några frågor")) {
+					} else if (currentKey.includes("kontakta mig om du har några frågor") || currentKey.includes("Kontakta mig om du har några frågor")) {
 						obj[currentKey] += line;
 					}
 				}
@@ -148,7 +148,7 @@
 			</div>
 		{/each}
 	</div>
-	<article>
+	<article class="[&>*]:m-2">
 		<!-- {JSON.stringify(viewCompany)} -->
 		<!-- {allCompanies["Accigo"]} -->
 		<Company name={viewCompanyName} companyData={viewCompany} />

@@ -27,7 +27,7 @@
 					? (showInterestedIn = !showInterestedIn)
 					: key.includes("Kompetenser vi värdesätter")
 					? (showLookingFor = !showLookingFor)
-					: key === "Du kan kontakta mig om du har några frågor"
+					: key.includes("kontakta mig om du har") || key.includes("Kontakta mig om du har")
 					? (showContact = !showContact)
 					: "";
 		}}
@@ -74,9 +74,10 @@
 			</p>
 		{/if}
 	{/if}
-	{#if key === "Du kan kontakta mig om du har några frågor"}
+	{#if key.includes("kontakta mig om du har") || key.includes("Kontakta mig om du har")}
 		{#if showContact}
-			<a href="mailto:{value}">{value}</a>
+			<a class="underline-2 underline-solid underline-blue underline" href="mailto:{value}"
+				>{value}</a>
 		{/if}
 	{/if}
 {/each}
