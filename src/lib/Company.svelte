@@ -76,7 +76,7 @@
 	{/if}
 	{#if key.includes("kontakta mig om du har") || key.includes("Kontakta mig om du har")}
 		{#if showContact}
-			<a class="underline-2 underline-solid underline-blue underline" href="mailto:{value}"
+			<a class="break-all underline-2 underline-solid underline-blue underline" href="mailto:{value}"
 				>{value}</a>
 		{/if}
 	{/if}
