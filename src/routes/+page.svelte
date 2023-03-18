@@ -65,6 +65,8 @@
 		"Webbutvecklare fullstack open source",
 	];
 
+	let enabledThingies;
+
 	// Sveltekit Snapshot
 	/** @type {import('./$types').Snapshot<string>} */
 	export const snapshot = {
@@ -74,6 +76,7 @@
 				viewCompany: viewCompany,
 				viewCompanyName: viewCompanyName,
 				selectedDropdown: selectedDropdown,
+				enabledThingies: enabledThingies,
 			};
 		},
 		restore: (obj) => {
@@ -81,6 +84,7 @@
 			viewCompany = obj.viewCompany;
 			viewCompanyName = obj.viewCompanyName;
 			selectedDropdown = obj.selectedDropdown;
+			enabledThingies = obj.enabledThingies;
 		},
 	};
 
@@ -110,8 +114,11 @@
 					// we have a new key
 					currentKey = line.slice(0, -1);
 
-					if (currentKey === "Om oss/att jobba hos oss") {
-					} else if (currentKey.includes("Mer om oss") || currentKey.includes("mer om oss")) {
+					if (
+						currentKey.includes("Mer om oss") ||
+						currentKey.includes("mer om oss") ||
+						currentKey.includes("läs mer om oss")
+					) {
 						// special case for 'Mer om oss' with three keys and empty values
 						obj[currentKey] = {
 							"Se företagsfilm": "",
@@ -120,7 +127,11 @@
 						};
 					} else if (
 						currentKey === "Vi är intresserade av dig som studerar" ||
-						currentKey === "Vi är intresserade av att"
+						currentKey === "Vi är intresserade av att" ||
+						currentKey.includes("kontakta mig om du har några frågor") ||
+						currentKey.includes("Kontakta mig om du har några frågor") ||
+						currentKey.includes("Kontakta mig om du har frågor") ||
+						currentKey === "Om oss/att jobba hos oss"
 					) {
 						// start a new array for these keys
 						currentArray = [];
@@ -133,8 +144,15 @@
 					// we have a value for the current key
 
 					if (currentKey === "Om oss/att jobba hos oss") {
-						obj[currentKey] = line;
-					} else if (currentKey.includes("Mer om oss") || currentKey.includes("mer om oss")) {
+						if (!obj[currentKey]) {
+							obj[currentKey] = [];
+						}
+						obj[currentKey].push(line);
+					} else if (
+						currentKey.includes("Mer om oss") ||
+						currentKey.includes("mer om oss") ||
+						currentKey.includes("läs mer om oss")
+					) {
 						if (line.includes("företagsfilm") || line.includes("Företagsfilm")) {
 							obj[currentKey]["Se företagsfilm"] = line.slice(line.indexOf("(") + 1, -1);
 						}
@@ -182,7 +200,11 @@
 						currentKey.includes("Kontakta mig om du har några frågor") ||
 						currentKey.includes("Kontakta mig om du har frågor")
 					) {
-						obj[currentKey] += line;
+						if (!obj[currentKey]) {
+							obj[currentKey] = [];
+						}
+						obj[currentKey].push(line);
+						// obj[currentKey] += line;
 					}
 				}
 			});
@@ -199,59 +221,64 @@
 		allCompanies[name] = parseData(test_data[name]);
 	});
 
-	console.log(allCompanies);
+	// console.log(allCompanies);
 </script>
 
-{selectedDropdown}
 <label for="filter-dropdown">Filter by subject</label>
 <select bind:value={selectedDropdown} name="filter-dropdown" id="">
 	{#each dropdownOptions as dropdownOption}
 		<option value={dropdownOption}>{dropdownOption}</option>
 	{/each}
 </select>
-<main class="flex flex-row [&>*]:m-4">
-	<div class="flex w-40 flex-col [&>*]:m-2">
-		{#each Object.entries(sections) as [sectionKey, sectionValue], i}
-			<div>
-				{#each sectionValue as classrooms}
-					{#each Object.entries(classrooms) as [classroom, companies]}
-						<button
-							on:click={() => {
-								showCompanies(classroom);
-								console.log(classroom);
-							}}
-							class:a-button={i === 0}
-							class:b-button={i === 1}
-							class:c-button={i === 2}>{classroom}</button>
-						<div class="[&>*]:m-1">
-							{#if showCompaniesInClassroom[classroom]}
-								{#each companies as company}
-									{#if selectedDropdown === "Any" || allCompanies[company]["Vi är intresserade av dig som studerar"].includes(selectedDropdown)}
-										<button
-											on:click={() => {
+{enabledThingies}
+<main class="flex w-40  flex-row">
+	{#each Object.entries(sections) as [sectionKey, sectionValue], i}
+		<div>
+			{#each sectionValue as classrooms}
+				{#each Object.entries(classrooms) as [classroom, companies]}
+					<button
+						on:click={() => {
+							showCompanies(classroom);
+							console.log(classroom);
+						}}
+						class:a-button={i === 0}
+						class:b-button={i === 1}
+						class:c-button={i === 2}>{classroom}</button>
+					<div class="[&>*]:m-1">
+						{#if showCompaniesInClassroom[classroom]}
+							{#each companies as company}
+								{#if selectedDropdown === "Any" || allCompanies[company]["Vi är intresserade av dig som studerar"].includes(selectedDropdown)}
+									<button
+										on:click={() => {
+											if (viewCompanyName === company) {
+												viewCompany = "";
+												viewCompanyName = "";
+											} else {
 												viewCompany = allCompanies[company];
-												// TODO make better
 												viewCompanyName = company;
-											}}
-											class:viewed-company={company === viewCompanyName}
-											class="rounded-md bg-slate-300 p-2">
-											{company}
-										</button>
-									{/if}
-								{/each}
-							{/if}
-						</div>
-					{/each}
+												console.log(viewCompany);
+											}
+										}}
+										class:viewed-company={company === viewCompanyName}
+										class="rounded-md border border-solid border-transparent bg-slate-300 p-2">
+										{company}
+									</button>
+								{/if}
+							{/each}
+						{/if}
+					</div>
 				{/each}
-			</div>
-		{/each}
-	</div>
-	<article class="[&>*]:m-2">
-		<!-- {JSON.stringify(viewCompany)} -->
-		<!-- {allCompanies["Accigo"]} -->
-		<Company where={whereIsTheCompany} name={viewCompanyName} companyData={viewCompany} />
-	</article>
+			{/each}
+		</div>
+	{/each}
 </main>
+<article class="flex flex-col [&>*]:m-2">
+	<Company
+		bind:enabledSnapshot={enabledThingies}
+		where={whereIsTheCompany}
+		name={viewCompanyName}
+		companyData={viewCompany} />
+</article>
 
 <footer class="m-4 h-64">
 	<p>
@@ -274,6 +301,6 @@
 		@apply hover-bg-red-300 m-2 self-start rounded-md bg-red-400 p-2;
 	}
 	.viewed-company {
-		@apply m-2 self-start rounded-md border border-solid border-black bg-green-400 p-2;
+		@apply rounded-md border border-solid border-black bg-green-400 p-2;
 	}
 </style>
