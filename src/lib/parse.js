@@ -481,12 +481,11 @@ Ambitionsdriven, konsultmässig, teknikintresserad
 	Kommando: `Kommando
   Om oss/att jobba hos oss:
   Kommando är ett nordiskt bolag baserad i Norge, Stockholm och Göteborg. Vår ledstjärna är att bygga långsiktiga relationer med våra kunder som grundar sig i förtroende genom att leverera högkvalitativa lösningar. Vi finns till för våra kunder under deras cybersäkerhetsresa. Vi på Kommando har stor kunskap och erfarenhet från arbete med nätverksinfrastruktur, informations- och cybersäkerhet samt automation.
-  Några av de område som vi arbetar med är:
+  Några av de område som vi arbetar med är
   • Identity and access Management
   • Privileged Access Management
   • Information Security
   • End point detection and response
-  
   Vill du vara med i vårt team?
   Vi ser gärna att du nyfiken, är driven och tar personligt ansvar. Ta nästa steg i din utveckling och var med i ett härligt team med de bästa och där både personlig utveckling som att skratta och fira framgångar är viktiga ingredienser.
   
@@ -665,7 +664,8 @@ Ambitionsdriven, konsultmässig, teknikintresserad
   Om oss/att jobba hos oss:
   Nordcloud är ledande i Europa inom molnimplementering, applikationsutveckling, managed services och utbildning. Det är en erkänd molnbaserad pionjär med en dokumenterad meritlista som hjälper organisationer att utnyttja det offentliga molnet på ett sätt som balanserar snabba vinster, omedelbara besparingar och hållbart värde. Förutom att samarbeta med VMware är Nordcloud trippelcertifierade över Microsoft Azure, Google Cloud Platform och Amazon Web Services – och finns med i Gartners Magic Quadrant. Nordcloud har 10 europeiska nav, över 1900 anställda och har levererat över 1 000 framgångsrika molnprojekt för företag som sträcker sig från medelstora till stora företag. IBM tillkännagav sitt förvärv av Nordcloud den 21 december 2020. Detta hjälper oss med finansiering och support, men vi är fortfarande ett separat företag.
   
-  Läs mer om oss: Webbsida
+  Läs mer om oss: 
+  Webbsida (http://nordcloud.com/)
   
   Vi är intresserade av dig som studerar:
   DevOps Engineer
