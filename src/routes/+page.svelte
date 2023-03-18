@@ -30,6 +30,41 @@
 	let viewCompany = "";
 	let viewCompanyName = "";
 
+	let selectedDropdown;
+	let dropdownOptions = [
+		"Any",
+		"Business Intelligence – analytiker",
+		"Data Engineer",
+		//
+		// "Data Engineers",
+		"DevOps Engineer",
+		"Distans – IT-säkerhetstekniker",
+		"Frontend-utvecklare",
+		"IT-infrastrukturspecialist",
+		"IT-säkerhetstekniker",
+		"Javautvecklare",
+		//
+		// "Javautveckling",
+		//
+		// "Kvalitetssäkare och testare",
+		"Kvalitetssäkrare och testare inom IT",
+		"Mjukvaruutvecklare, Inbyggda system och IoT",
+		//
+		// "Mjukvaruutvecklare, Inbyggda system och IoT (Internet of Things-utvecklare)",
+		"Programutvecklare .NET",
+		"Programutvecklare Java",
+		//
+		// "Pythonutvecklare",
+		// "Pythonutvecklare för AI",
+		"Pythonutvecklare inom AI",
+		"UX-designer",
+		"Virtual Reality-utvecklare",
+		//
+		// "VR",
+		"Webbutvecklare .NET",
+		"Webbutvecklare fullstack open source",
+	];
+
 	// Sveltekit Snapshot
 	/** @type {import('./$types').Snapshot<string>} */
 	export const snapshot = {
@@ -120,14 +155,21 @@
 							);
 						}
 						// obj[currentKey][line] = "";
-					} else if (
-						currentKey === "Vi är intresserade av dig som studerar" ||
-						currentKey === "Vi är intresserade av att"
-					) {
+					} else if (currentKey === "Vi är intresserade av att") {
 						// add value to current array
 						if (!obj[currentKey]) {
 							obj[currentKey] = [];
 						}
+						obj[currentKey].push(line);
+					} else if (currentKey === "Vi är intresserade av dig som studerar") {
+						// add value to current array
+						// check for typos in data
+						if (!obj[currentKey]) {
+              obj[currentKey] = [];
+						}
+            if (!dropdownOptions.includes(line)) {
+              throw new Error(`invalid subject string: ${line}`);
+            }
 						obj[currentKey].push(line);
 					} else if (currentKey.includes("Kompetenser vi värdesätter")) {
 						obj[currentKey] += line;
@@ -155,6 +197,13 @@
 	console.log(allCompanies);
 </script>
 
+{selectedDropdown}
+<label for="filter-dropdown">Filter by subject</label>
+<select bind:value={selectedDropdown} name="filter-dropdown" id="">
+	{#each dropdownOptions as dropdownOption}
+		<option value={dropdownOption}>{dropdownOption}</option>
+	{/each}
+</select>
 <main class="flex flex-row [&>*]:m-4">
 	<div class="flex w-40 flex-col [&>*]:m-2">
 		{#each Object.entries(sections) as [sectionKey, sectionValue], i}
@@ -172,16 +221,18 @@
 						<div class="[&>*]:m-1">
 							{#if showCompaniesInClassroom[classroom]}
 								{#each companies as company}
-									<button
-										on:click={() => {
-											viewCompany = allCompanies[company];
-											// TODO make better
-											viewCompanyName = company;
-										}}
-										class:viewed-company={company === viewCompanyName}
-										class="rounded-md bg-slate-300 p-2">
-										{company}
-									</button>
+									{#if selectedDropdown === "Any" || allCompanies[company]["Vi är intresserade av dig som studerar"].includes(selectedDropdown)}
+										<button
+											on:click={() => {
+												viewCompany = allCompanies[company];
+												// TODO make better
+												viewCompanyName = company;
+											}}
+											class:viewed-company={company === viewCompanyName}
+											class="rounded-md bg-slate-300 p-2">
+											{company}
+										</button>
+									{/if}
 								{/each}
 							{/if}
 						</div>
