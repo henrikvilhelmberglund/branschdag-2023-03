@@ -178,6 +178,7 @@
 											// TODO make better
 											viewCompanyName = company;
 										}}
+										class:viewed-company={company === viewCompanyName}
 										class="rounded-md bg-slate-300 p-2">
 										{company}
 									</button>
@@ -215,5 +216,8 @@
 	}
 	.c-button {
 		@apply hover-bg-red-300 m-2 self-start rounded-md bg-red-400 p-2;
+	}
+	.viewed-company {
+		@apply m-2 self-start rounded-md border border-solid border-black bg-green-400 p-2;
 	}
 </style>
