@@ -98,6 +98,9 @@
 						if (line.includes("LinkedIn")) {
 							obj[currentKey]["LinkedIn"] = line.slice(line.indexOf("(") + 1, -1);
 						}
+						if (line.includes("Rörlig företagspresentation")) {
+							obj[currentKey]["Rörlig företagspresentation"] = line.slice(line.indexOf("(") + 1, -1);
+						}
 						// obj[currentKey][line] = "";
 					} else if (
 						currentKey === "Vi är intresserade av dig som studerar" ||
