@@ -1,4 +1,5 @@
 <script>
+	import { afterUpdate } from "svelte";
 	export let companyData;
 	export let name;
 	export let where;
@@ -11,6 +12,15 @@
 	let showContact = false;
 	let showExtra = false;
 	let enabled = {};
+	export let enabledSnapshot = {};
+
+	function applySnapshot() {
+		enabled = enabledSnapshot;
+	}
+
+	afterUpdate(() => {
+		applySnapshot();
+	});
 </script>
 
 <h1 class="text-xl">{name}</h1>
@@ -42,9 +52,11 @@
 		class:toggled={enabled[key]}>{key}</button>
 	{#if key === "Om oss/att jobba hos oss"}
 		{#if showAbout}
-			<p>
-				{value}
-			</p>
+			{#each value as line}
+				<p>
+					{line}
+				</p>
+			{/each}
 		{/if}
 	{/if}
 	{#if key.includes("Mer om oss") || key.includes("mer om oss")}
@@ -87,16 +99,18 @@
 	{/if}
 	{#if key.includes("kontakta mig om du har") || key.includes("Kontakta mig om du har")}
 		{#if showContact}
-			{#if !value.includes("(")}
-				<a
-					class="underline-2 underline-solid underline-blue break-all underline"
-					href="mailto:{value}">{value}</a>
+			{#each value as address}
+				{#if !value.includes("(")}
+					<a
+						class="underline-2 underline-solid underline-blue block break-all underline"
+						href="mailto:{address}">{address}</a>
+				{/if}
 			{:else}
 				<a
 					class="underline-2 underline-solid underline-blue break-all underline"
-					href="mailto:{value.split('(')[0]}">{value.split("(")[0]}</a>
+					href="mailto:{address.split('(')[0]}">{address.split("(")[0]}</a>
 				<p>({value.split("(")[1]}</p>
-			{/if}
+			{/each}
 		{/if}
 	{/if}
 	{#if key.includes("Extra")}
