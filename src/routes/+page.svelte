@@ -165,13 +165,15 @@
 						// add value to current array
 						// check for typos in data
 						if (!obj[currentKey]) {
-              obj[currentKey] = [];
+							obj[currentKey] = [];
 						}
-            if (!dropdownOptions.includes(line)) {
-              throw new Error(`invalid subject string: ${line}`);
-            }
+						if (!dropdownOptions.includes(line)) {
+							throw new Error(`invalid subject string: ${line}`);
+						}
 						obj[currentKey].push(line);
 					} else if (currentKey.includes("Kompetenser vi värdesätter")) {
+						obj[currentKey] += line;
+					} else if (currentKey.includes("Extra")) {
 						obj[currentKey] += line;
 					} else if (
 						currentKey.includes("kontakta mig om du har några frågor") ||

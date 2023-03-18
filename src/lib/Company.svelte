@@ -9,6 +9,7 @@
 	let showInterestedIn = false;
 	let showLookingFor = false;
 	let showContact = false;
+	let showExtra = false;
 	let enabled = {};
 </script>
 
@@ -33,6 +34,8 @@
 					? (showLookingFor = !showLookingFor)
 					: key.includes("kontakta mig om du har") || key.includes("Kontakta mig om du har")
 					? (showContact = !showContact)
+					: key.includes("Extra")
+					? (showExtra = !showExtra)
 					: "";
 		}}
 		class="key"
@@ -94,6 +97,13 @@
 					href="mailto:{value.split('(')[0]}">{value.split("(")[0]}</a>
 				<p>({value.split("(")[1]}</p>
 			{/if}
+		{/if}
+	{/if}
+	{#if key.includes("Extra")}
+		{#if showExtra}
+			<p>
+				{value}
+			</p>
 		{/if}
 	{/if}
 {/each}
