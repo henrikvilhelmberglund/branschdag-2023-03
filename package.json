@@ -1,6 +1,6 @@
 {
-	"name": "sveltekit-unocss-template",
-	"version": "0.0.4",
+	"name": "branschdag-2023-03",
+	"version": "0.0.1",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
