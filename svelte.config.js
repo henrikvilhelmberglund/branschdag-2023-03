@@ -10,10 +10,10 @@ const config = {
 		adapter: adapter(),
 		paths: {
 			// change path below to your github repo if using Github Pages
-			base: dev ? "" : "/sveltekit-unocss-template",
+			base: dev ? "" : "/branschdag-2023-03",
 		},
 	},
-  vitePlugin: {
+	vitePlugin: {
 		experimental: {
 			inspector: true,
 		},
