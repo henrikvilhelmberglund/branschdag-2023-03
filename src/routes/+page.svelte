@@ -229,7 +229,7 @@
 </script>
 
 <label for="filter-dropdown">Filter by subject</label>
-<select bind:value={selectedDropdown} name="filter-dropdown" id="">
+<select class="border" bind:value={selectedDropdown} name="filter-dropdown" id="">
 	{#each dropdownOptions as dropdownOption}
 		<option value={dropdownOption}>{dropdownOption}</option>
 	{/each}
@@ -263,7 +263,7 @@
 											} else {
 												viewCompany = allCompanies[company];
 												viewCompanyName = company;
-												console.log(viewCompany);
+												// console.log(viewCompany);
 											}
 										}}
 										class:viewed-company={company === viewCompanyName}
