@@ -342,7 +342,7 @@
 		@apply hover-bg-red-300 m-2 self-start rounded-md bg-red-400 p-2;
 	}
 	.viewed-company {
-		@apply dark-bg-green-600 dark-text-white rounded-md border border-solid border-black bg-green-400 p-2;
+		@apply dark-bg-green-700 dark-text-white rounded-md border border-solid border-black bg-green-400 p-2;
 	}
 	.toggled-classroom-a {
 		@apply outline-solid outline-2 outline-amber-700;
