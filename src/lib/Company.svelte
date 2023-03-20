@@ -33,9 +33,12 @@
 					? (enabled[key] = !enabled[key])
 					: key === "Vi är intresserade av att"
 					? (enabled[key] = !enabled[key])
-					: key.includes("Kompetenser vi värdesätter")
+					: key.includes("Kompetenser vi värdesätter") ||
+					  key.includes("Kompetenser som vi värdesätter")
 					? (enabled[key] = !enabled[key])
-					: key.includes("kontakta mig om du har") || key.includes("Kontakta mig om du har")
+					: key.includes("kontakta mig om du har") ||
+					  key.includes("Kontakta mig om du har") ||
+					  key.includes("Kontakta mig vid frågor")
 					? (enabled[key] = !enabled[key])
 					: key.includes("Extra")
 					? (enabled[key] = !enabled[key])
@@ -67,11 +70,13 @@
 	{/if}
 	{#if key === "Vi är intresserade av dig som studerar"}
 		{#if enabled[key]}
-			{#each value as studentType}
-				<p>
-					{studentType}
-				</p>
-			{/each}
+			<div class="[&>*]:m-px">
+				{#each value as studentType}
+					<p>
+						{studentType}
+					</p>
+				{/each}
+			</div>
 		{/if}
 	{/if}
 	{#if key === "Vi är intresserade av att"}
@@ -83,26 +88,32 @@
 			{/each}
 		{/if}
 	{/if}
-	{#if key.includes("Kompetenser vi värdesätter")}
+	{#if key.includes("Kompetenser vi värdesätter") || key.includes("Kompetenser som vi värdesätter")}
 		{#if enabled[key]}
 			<p>
 				{value}
 			</p>
 		{/if}
 	{/if}
-	{#if key.includes("kontakta mig om du har") || key.includes("Kontakta mig om du har")}
+	{#if key.includes("kontakta mig om du har") || key.includes("Kontakta mig om du har") || key.includes("Kontakta mig vid frågor")}
 		{#if enabled[key]}
 			{#each value as address}
 				{#if !value.includes("(")}
-					<a
-						class="underline-2 underline-solid underline-blue block break-all underline"
-						href="mailto:{address}">{address}</a>
-				{/if}
-			{:else}
-				<a
+					{#if address.includes("@")}
+						<a
+							class="underline-2 underline-solid underline-blue block break-all underline"
+							href="mailto:{address}">{address}</a>
+					{:else}
+						<p class="">
+							{address}
+						</p>
+					{/if}
+          {:else}
+          <a
 					class="underline-2 underline-solid underline-blue break-all underline"
 					href="mailto:{address.split('(')[0]}">{address.split("(")[0]}</a>
-				<p>({value.split("(")[1]}</p>
+          <p>({value.split("(")[1]}</p>
+          {/if}
 			{/each}
 		{/if}
 	{/if}
