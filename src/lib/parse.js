@@ -884,8 +884,7 @@ export const test_data = {
   Eget driv Stor nyfikenhet att lära sig Sociala färdigheter Hjälpsam
   
   Vi tar emot spontanansökningar
-  Bifoga CV och en kort presentation av dig och berätta varför du är intresserad av att göra din praktik eller att jobba hos oss. Vi kontaktar dig ifall din profil låter intressant. Jag vill göra en intresseanmälan »
-  
+
   Kontakta mig om du har några frågor:
   helen.alkfors@signupsoftware.com
   `,
@@ -905,9 +904,7 @@ export const test_data = {
   
   Vi tar emot spontanansökningar
   Kontakta mig om du har frågor:
-  Simon Vesterlund, (obs: se riktiga webbsidan för telefonnummer)
-  
-  Bifoga CV och en kort presentation av dig och berätta varför du är intresserad av att göra din praktik eller att jobba hos oss. Vi kontaktar dig ifall din profil låter intressant. Jag vill göra en intresseanmälan »  
+  Simon Vesterlund, (obs: se riktiga webbsidan för telefonnummer)  
   `,
 	"Svenska kraftnät": `Svenska kraftnät
   Om oss/att jobba hos oss:
@@ -983,8 +980,6 @@ export const test_data = {
   
   Kontakta mig om du har frågor:
   Jonna Hillblom hello@substorm.ai
-  
-  Bifoga CV och en kort presentation av dig och berätta varför du är intresserad av att göra din praktik eller att jobba hos oss. Vi kontaktar dig ifall din profil låter intressant. Jag vill göra en intresseanmälan »  
   `,
 	"System Verification": `System Verification
   Om oss/att jobba hos oss:
@@ -1002,7 +997,9 @@ export const test_data = {
   Anställa studenter efter examen
   
   Kontakta mig vid frågor:
-  Mathilda Syrén`,
+  Mathilda Syrén
+  mathilda.syren@systemverification.com
+  `,
 	Swedbank: `Swedbank
   Om oss/att jobba hos oss:
   Förutom att vi är en full sortiments bank, så hjälper vi även våra kunder att förenkla vardagen. Till vår hjälp använder vi då en del tekniska och digitala lösningar. För att dessa ska kunna fungera så har vi en hel del IT struktur på plats. Inom denna IT struktur har vi även en del system som behöver utveckling samt underhåll.
@@ -1144,7 +1141,6 @@ export const test_data = {
   Ta emot studenter på LIA 2023
   Anställa studenter efter examen
   
-  Anställa studenter efter examen
   Kontakta mig om du har frågor:
   karl.kan@vattenfall.com
 
