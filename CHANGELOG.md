@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.4](https://github.com/henrikvilhelmberglund/branschdag-2023-03/compare/v0.0.3...v0.0.4) (2023-03-20)
+
+
+### Features
+
+* :sparkles: add darkmode ([74e1370](https://github.com/henrikvilhelmberglund/branschdag-2023-03/commit/74e1370394ab80c28fc26130934057f178cb38fc))
+
+
+### Bug Fixes
+
+* :lipstick: better color ([5761644](https://github.com/henrikvilhelmberglund/branschdag-2023-03/commit/576164456e64557c165431dea9e18854fd877254))
+* :bug: fix parse function ([70c6765](https://github.com/henrikvilhelmberglund/branschdag-2023-03/commit/70c67658c9ee74b667688850dcc343f8aee92184))
+* :art: add small fixes to data ([87f20f7](https://github.com/henrikvilhelmberglund/branschdag-2023-03/commit/87f20f778608314f22ba35db7b17e8dc57559444))
+* :bug: fix bugs ([74006fc](https://github.com/henrikvilhelmberglund/branschdag-2023-03/commit/74006fc6a177513d04af227ea51accfbacf75e6a))
+
 ## [0.0.3](https://github.com/henrikvilhelmberglund/branschdag-2023-03/compare/v0.0.2...v0.0.3) (2023-03-20)
 
 
