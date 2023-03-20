@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.2](https://github.com/henrikvilhelmberglund/branschdag-2023-03/compare/v0.0.1...v0.0.2) (2023-03-20)
+
+
+### Features
+
+* :sparkles: use reactive declaration to update viewCompany whenever viewCompanyName changes (aka from search) ([094a0b7](https://github.com/henrikvilhelmberglund/branschdag-2023-03/commit/094a0b793d911a87e15b451642f0649224fb02cc))
+* :package: add svelte-simple-autocomplete ([077bfef](https://github.com/henrikvilhelmberglund/branschdag-2023-03/commit/077bfef0009febd5fc9b936417e67ff437235e17))
+
 ## 0.0.1 (2023-03-19)
 
 
