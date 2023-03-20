@@ -43,10 +43,9 @@
 		);
 	}
 
-  $: if (selectedDropdown === "Any") {
+	$: if (selectedDropdown === "Any") {
 		filteredListOfCompanies = listOfCompanies;
 	}
-
 
 	let selectedDropdown;
 	let dropdownOptions = [
@@ -185,6 +184,9 @@
 								obj[currentKey]["Webbsida"] = line.slice(line.indexOf("(") + 1, -1);
 							}
 						}
+						if (line.includes("Hemsida")) {
+							obj[currentKey]["Hemsida"] = line.slice(line.indexOf("(") + 1, -1);
+						}
 						if (line.includes("LinkedIn")) {
 							obj[currentKey]["LinkedIn"] = line.slice(line.indexOf("(") + 1, -1);
 						}
@@ -211,14 +213,19 @@
 							throw new Error(`invalid subject string: ${line}`);
 						}
 						obj[currentKey].push(line);
-					} else if (currentKey.includes("Kompetenser vi värdesätter")) {
+					} else if (
+						currentKey.includes("Kompetenser vi värdesätter") ||
+						currentKey.includes("Kompetenser som vi värdesätter")
+					) {
 						obj[currentKey] += line;
 					} else if (currentKey.includes("Extra")) {
 						obj[currentKey] += line;
 					} else if (
 						currentKey.includes("kontakta mig om du har några frågor") ||
 						currentKey.includes("Kontakta mig om du har några frågor") ||
-						currentKey.includes("Kontakta mig om du har frågor")
+						currentKey.includes("Kontakta mig om du har frågor") ||
+						currentKey.includes("Kontakta mig vid frågor")
+
 					) {
 						if (!obj[currentKey]) {
 							obj[currentKey] = [];
