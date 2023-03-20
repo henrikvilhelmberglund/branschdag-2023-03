@@ -4,6 +4,7 @@
 	import { test_data } from "$lib/parse.js";
 
 	import Company from "$lib/Company.svelte";
+	import AutoComplete from "simple-svelte-autocomplete";
 
 	$: whereIsTheCompany = findCompany(sections, viewCompanyName);
 
@@ -29,8 +30,10 @@
 
 	let toggledClassrooms = {};
 
-	let viewCompany = "";
+	// let viewCompany = "";
 	let viewCompanyName = "";
+
+	$: viewCompany = allCompanies[viewCompanyName] ?? "";
 
 	let selectedDropdown;
 	let dropdownOptions = [
@@ -234,6 +237,11 @@
 		<option value={dropdownOption}>{dropdownOption}</option>
 	{/each}
 </select>
+<p>Search</p>
+<AutoComplete
+	class="border border-solid"
+	items={listOfCompanies}
+	bind:selectedItem={viewCompanyName} />
 <main class="flex w-40  flex-row">
 	{#each Object.entries(sections) as [sectionKey, sectionValue], i}
 		<div>
