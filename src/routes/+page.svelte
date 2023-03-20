@@ -5,6 +5,7 @@
 
 	import Company from "$lib/Company.svelte";
 	import AutoComplete from "simple-svelte-autocomplete";
+	import DarkModeToggle from "$lib/DarkModeToggle.svelte";
 
 	$: whereIsTheCompany = findCompany(sections, viewCompanyName);
 
@@ -20,6 +21,8 @@
 		}
 		return null;
 	}
+
+	let lightMode = true;
 
 	let showCompaniesInClassroom = {
 		// A211: false,
@@ -95,6 +98,7 @@
 				selectedDropdown: selectedDropdown,
 				enabledThingies: enabledThingies,
 				toggledClassrooms: toggledClassrooms,
+				lightMode: lightMode,
 			};
 		},
 		restore: (obj) => {
@@ -104,6 +108,7 @@
 			selectedDropdown = obj.selectedDropdown;
 			enabledThingies = obj.enabledThingies;
 			toggledClassrooms = obj.toggledClassrooms;
+			lightMode = obj.lightMode;
 		},
 	};
 
@@ -225,7 +230,6 @@
 						currentKey.includes("Kontakta mig om du har några frågor") ||
 						currentKey.includes("Kontakta mig om du har frågor") ||
 						currentKey.includes("Kontakta mig vid frågor")
-
 					) {
 						if (!obj[currentKey]) {
 							obj[currentKey] = [];
@@ -251,18 +255,20 @@
 	// console.log(allCompanies);
 </script>
 
-<label for="filter-dropdown">Filter by subject</label>
-<select class="border" bind:value={selectedDropdown} name="filter-dropdown" id="">
+<DarkModeToggle bind:lightMode />
+<label class="dark:text-white" for="filter-dropdown">Filter by subject</label>
+<select class="border dark:text-white" bind:value={selectedDropdown} name="filter-dropdown" id="">
 	{#each dropdownOptions as dropdownOption}
 		<option value={dropdownOption}>{dropdownOption}</option>
 	{/each}
 </select>
-<p>Search</p>
+<p class="dark:text-white">Search</p>
 <AutoComplete
-	class="border border-solid"
+	class="border border-solid dark:text-white"
+	className="search"
 	items={filteredListOfCompanies}
 	bind:selectedItem={viewCompanyName} />
-<main class="flex w-40  flex-row">
+<main class="flex w-40 flex-row">
 	{#each Object.entries(sections) as [sectionKey, sectionValue], i}
 		<div>
 			{#each sectionValue as classrooms}
@@ -295,7 +301,7 @@
 											}
 										}}
 										class:viewed-company={company === viewCompanyName}
-										class="rounded-md border border-solid border-transparent bg-slate-300 p-2">
+										class="rounded-md border border-solid border-transparent bg-slate-300 p-2 dark:bg-slate-500 dark:text-white">
 										{company}
 									</button>
 								{/if}
@@ -316,10 +322,10 @@
 </article>
 
 <footer class="m-4 h-64">
-	<p>
+	<p class="dark:text-white">
 		by
 		<a
-			class="underline-blue-600 underline hover:text-blue-600"
+			class="underline-blue-600 underline hover:text-blue-600 dark:text-white"
 			href="https://github.com/henrikvilhelmberglund"
 			><img class="inline w-6" src="{base}/Henrik.png" alt="avatar" />henrikvilhelmberglund</a>
 	</p>
@@ -336,7 +342,7 @@
 		@apply hover-bg-red-300 m-2 self-start rounded-md bg-red-400 p-2;
 	}
 	.viewed-company {
-		@apply rounded-md border border-solid border-black bg-green-400 p-2;
+		@apply dark-bg-green-600 dark-text-white rounded-md border border-solid border-black bg-green-400 p-2;
 	}
 	.toggled-classroom-a {
 		@apply outline-solid outline-2 outline-amber-700;
@@ -346,5 +352,14 @@
 	}
 	.toggled-classroom-c {
 		@apply outline-solid outline-2 outline-red-700;
+	}
+
+	:global(body.dark) {
+		background-color: #222222;
+		/* color: white; */
+	}
+	:global(body.dark .search div) {
+		background-color: #333333;
+		color: white !important;
 	}
 </style>

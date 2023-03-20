@@ -16,9 +16,9 @@
 	});
 </script>
 
-<h1 class="text-xl">{name}</h1>
+<h1 class="text-xl dark:text-white">{name}</h1>
 {#if where}
-	<h2 class="text-sm">{where}</h2>
+	<h2 class="text-sm dark:text-white">{where}</h2>
 {/if}
 {#each Object.entries(companyData) as [key, value]}
 	<button
@@ -49,7 +49,7 @@
 	{#if key === "Om oss/att jobba hos oss"}
 		{#if enabled[key]}
 			{#each value as line}
-				<p>
+				<p class="dark:text-white">
 					{line}
 				</p>
 			{/each}
@@ -61,8 +61,9 @@
 				{#each Object.entries(value) as [linkType, link]}
 					<!-- check if link actually is something  -->
 					{#if link}
-						<a class="underline-2 underline-solid underline-blue underline" href={link}
-							>{linkType}</a>
+						<a
+							class="underline-2 underline-solid underline-blue underline dark:text-white"
+							href={link}>{linkType}</a>
 					{/if}
 				{/each}
 			</div>
@@ -70,7 +71,7 @@
 	{/if}
 	{#if key === "Vi är intresserade av dig som studerar"}
 		{#if enabled[key]}
-			<div class="[&>*]:m-px">
+			<div class="dark:text-white [&>*]:m-px">
 				{#each value as studentType}
 					<p>
 						{studentType}
@@ -82,7 +83,7 @@
 	{#if key === "Vi är intresserade av att"}
 		{#if enabled[key]}
 			{#each value as ourInterest}
-				<p>
+				<p class="dark:text-white">
 					{ourInterest}
 				</p>
 			{/each}
@@ -90,7 +91,7 @@
 	{/if}
 	{#if key.includes("Kompetenser vi värdesätter") || key.includes("Kompetenser som vi värdesätter")}
 		{#if enabled[key]}
-			<p>
+			<p class="dark:text-white">
 				{value}
 			</p>
 		{/if}
@@ -101,25 +102,25 @@
 				{#if !value.includes("(")}
 					{#if address.includes("@")}
 						<a
-							class="underline-2 underline-solid underline-blue block break-all underline"
+							class="underline-2 underline-solid underline-blue block break-all underline dark:text-white"
 							href="mailto:{address}">{address}</a>
 					{:else}
-						<p class="">
+						<p class="dark:text-white">
 							{address}
 						</p>
 					{/if}
-          {:else}
-          <a
-					class="underline-2 underline-solid underline-blue break-all underline"
-					href="mailto:{address.split('(')[0]}">{address.split("(")[0]}</a>
-          <p>({value.split("(")[1]}</p>
-          {/if}
+				{:else}
+					<a
+						class="underline-2 underline-solid underline-blue break-all underline"
+						href="mailto:{address.split('(')[0]}">{address.split("(")[0]}</a>
+					<p class="dark:text-white">({value.split("(")[1]}</p>
+				{/if}
 			{/each}
 		{/if}
 	{/if}
 	{#if key.includes("Extra")}
 		{#if enabled[key]}
-			<p>
+			<p class="dark:text-white">
 				{value}
 			</p>
 		{/if}
@@ -128,9 +129,10 @@
 
 <style>
 	.key {
-		@apply rounded-md bg-slate-300 p-2;
+		@apply rounded-md bg-slate-300 dark-bg-slate-500 dark-text-white p-2;
 	}
 	.toggled {
-		@apply rounded-md bg-blue-300 p-2;
+		@apply rounded-md bg-blue-300 dark-bg-blue-600 p-2;
 	}
+
 </style>
