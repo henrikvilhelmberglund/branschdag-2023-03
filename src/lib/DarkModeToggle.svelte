@@ -31,8 +31,9 @@
 		color: white;
 		border: none;
 		border-radius: 4px;
-		padding: 0.3rem;
+		padding: 0.2rem;
 		text-transform: uppercase;
+    font-size: 2rem;
 	}
 	:global(body.dark) button {
 		background-color: #aaaaaa;

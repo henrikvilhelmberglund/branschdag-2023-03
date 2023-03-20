@@ -255,9 +255,16 @@
 	// console.log(allCompanies);
 </script>
 
+<svelte:head>
+	<title>Hitta på branschdagen</title>
+	<meta
+		name="description"
+		content="Med denna sida kan du enklare hitta företagen på branschdagen." />
+</svelte:head>
+
 <DarkModeToggle bind:lightMode />
 <label class="dark:text-white" for="filter-dropdown">Filter by subject</label>
-<select class="border dark:text-white" bind:value={selectedDropdown} name="filter-dropdown" id="">
+<select class="border p-1 w-64 block dark:text-white" bind:value={selectedDropdown} name="filter-dropdown" id="">
 	{#each dropdownOptions as dropdownOption}
 		<option value={dropdownOption}>{dropdownOption}</option>
 	{/each}
@@ -266,6 +273,7 @@
 <AutoComplete
 	class="border border-solid dark:text-white"
 	className="search"
+	aria-label="Search field"
 	items={filteredListOfCompanies}
 	bind:selectedItem={viewCompanyName} />
 <main class="flex w-40 flex-row">
