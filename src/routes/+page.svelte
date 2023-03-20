@@ -35,6 +35,19 @@
 
 	$: viewCompany = allCompanies[viewCompanyName] ?? "";
 
+	let filteredListOfCompanies = listOfCompanies;
+
+	$: if (selectedDropdown !== "Any") {
+		filteredListOfCompanies = listOfCompanies.filter((company) =>
+			allCompanies[company]["Vi är intresserade av dig som studerar"].includes(selectedDropdown)
+		);
+	}
+
+  $: if (selectedDropdown === "Any") {
+		filteredListOfCompanies = listOfCompanies;
+	}
+
+
 	let selectedDropdown;
 	let dropdownOptions = [
 		"Any",
@@ -240,7 +253,7 @@
 <p>Search</p>
 <AutoComplete
 	class="border border-solid"
-	items={listOfCompanies}
+	items={filteredListOfCompanies}
 	bind:selectedItem={viewCompanyName} />
 <main class="flex w-40  flex-row">
 	{#each Object.entries(sections) as [sectionKey, sectionValue], i}
