@@ -450,6 +450,28 @@ export const test_data = {
   Du kan kontakta mig om du har några frågor:
   michael@inadra.se
   `,
+	InfoSolutions: `InfoSolutions
+  Om oss/att jobba hos oss:
+  InfoSolutions Sverige AB grundades av Alex Stendahl år 2007 som ett svar på behovet att kunna skicka information elektroniskt mellan laboratorier och vårdgivare inom Hälso- och sjukvården. Den första produkten som togs fram var vår BTH – Business Transaction Hub. Runt BTH har vi byggt våra webbaserade system som LabPortalen, PatientPortalen, BrevPortalen, RöntgenPortalen, Connect, Lab2Lab, Medicinska Studier och KonsultationsRemiss. InfoSolutions har under åren vuxit till att bli en självklar partner inom EDI och integration. Vår vision är att förenkla IT i vården genom enkla, stabila och effektiva produkter och tjänster. InfoSolutions klev även fram i pandemin och levererade storskalig provtagning på uppdrag från Folkhälsomyndigheten. Vi har också hög branschkännedom efter att under många år jobbat som spindeln i nätet mellan regioner, privata vårdgivare och några av Sveriges största laboratorier. Vi är ett företag som vill värna om varandra, var glad när någon gör något bra och lyckas med en utmaning. InfoSolutions är bolaget med storslagna visioner, varma hjälpsamma människor och en entreprenörsdriven historia. Vår vision är att förenkla IT i vården genom enkla, stabila och effektiva produkter och tjänster. Vi bygger infrastruktur och kopplar ihop system och instrument inom hälso- och sjukvården. Hos oss får du chansen att tillsammans med ett sammansvetsat team hjälpa våra kunder erbjuda en effektivare hälso-och sjukvård.
+  
+  Mer om oss:
+  Webbsida (http://www.infosolutions.se/)
+  LinkedIn (https://www.linkedin.com/company/infosolutions-sverige-ab/)
+  Rörlig företagspresentation (https://www.youtube.com/watch?v=5KNwWZP_SRE)
+  
+  Vi är intresserade av dig som studerar:
+  Programutvecklare .NET
+  Webbutvecklare .NET
+  Webbutvecklare fullstack open source
+
+  Vi är intresserade av att:
+  Anställa studenter efter examen
+  Ta emot LIA-praktikanter under 2023
+  
+  Kontakta mig om du har frågor
+  Du kan kontakta mig om du har några frågor:
+  sara.skold@infosolutions.se
+  `,
 	Innofactor: `Innofactor
   Om oss/att jobba hos oss:
   På Innofactor är vi stolta över att vara en av Nordens mest främsta Microsoft-partner. Vi har mycket spännande på gång och vill gärna bli fler på vår resa att bli ännu bättre, och samtidigt ha roligt på vägen! Tillsammans bildar vi ett starkt team som drivs av att ge både kunder och individer chansen att utvecklas och lyckas i sina verksamheter med tekniken som hävstång. Våra kunder befinner sig mitt i sin digitalisering och har ett stort intresse att förbättra och effektivisera sina arbetssätt. Som konsulter gör vi stor skillnad ute hos och tillsammans med våra kunder.

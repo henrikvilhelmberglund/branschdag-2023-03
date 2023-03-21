@@ -1,29 +1,33 @@
 export const sections = {
 	A: [
 		{
-			// SignUp Software was spelled Signup Software in name list
-			A211: ["Länsförsäkringar", "SignUp Software", "Svensk Driftpartner", "Xlent"],
-		},
-		{
 			A214: ["Vobling", "Voyado", "Warpin Media", "Swedbank"],
 		},
 		{
 			// Tutus was spelled Tutu in name list
-			A215: ["Tutus", "Vattenfall", "MSB", "Zington", "Enfo"],
+			A215: ["Tutus", "Vattenfall", "Zington", "Enfo"],
 		},
 		{
 			// Sharpness AB was called Sharpness in name list
 			// Svenska kraftnät was called Svenska Kraftnät in name list
-			A218: ["Sharpness AB", "System Verification", "Svenska kraftnät", "Truesec"],
+			A218: [
+				"Sharpness AB",
+				"System Verification",
+				"Svenska kraftnät",
+				"MSB",
+				"Länsförsäkringar",
+				"InfoSolutions",
+			],
 		},
 	],
 	B: [
 		{
-			B201: ["Prevas", "Releye", "Sebratec", "Sopra Steria"],
+			// SignUp Software was spelled Signup Software in name list
+			B201: ["Prevas", "Releye", "Sebratec", "Sopra Steria", "SignUp Software"],
 		},
 		{
 			// BOX bygg was called BOXbygg in name list
-			B202: ["Polisen", "BOX bygg", "Substorm"],
+			B202: ["Polisen", "BOX bygg", "Substorm", "Svensk Driftpartner"],
 		},
 		{
 			// Orange Business Services was called Orange business services in name list
@@ -36,7 +40,7 @@ export const sections = {
 	C: [
 		{
 			// Tietoevry was called Tietoevery in name list
-			C201: ["Climber", "Devoteam", "EdgeGuide", "Tietoevry"],
+			C201: ["Xlent", "Climber", "Devoteam", "EdgeGuide", "Tietoevry"],
 		},
 		{
 			C204: ["Bonnier Healthcare", "Capgemini", "IBM", "Trafikförvaltningen – Region Stockholm"],
@@ -48,7 +52,7 @@ export const sections = {
 		},
 		{
 			// Föräkringskassan IT was called Försäkringskassan in name list
-			C208: ["Addpro", "Accigo", "Försäkringskassan IT", "Amanzia"],
+			C208: ["Addpro", "Accigo", "Försäkringskassan IT", "Amanzia", "Truesec"],
 		},
 		{
 			C221: ["Inadra", "Innofactor", "Kommando", "Lantmännen"],
@@ -80,7 +84,8 @@ export const listOfCompanies = [
 	"Försäkringskassan IT",
 	"Grant Thorton",
 	"IBM",
-	"Inadra",
+  "Inadra",
+  "InfoSolutions",
 	"Innofactor",
 	"Kommando",
 	"Lantmännen",
