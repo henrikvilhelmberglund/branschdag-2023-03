@@ -27,7 +27,7 @@ export const sections = {
 		},
 		{
 			// BOX bygg was called BOXbygg in name list
-			B202: ["Polisen", "BOX bygg", "Substorm", "Svensk Driftpartner"],
+			B202: ["Polisen", "Climber", "BOX bygg", "Substorm", "Svensk Driftpartner"],
 		},
 		{
 			// Orange Business Services was called Orange business services in name list
@@ -40,7 +40,7 @@ export const sections = {
 	C: [
 		{
 			// Tietoevry was called Tietoevery in name list
-			C201: ["Xlent", "Climber", "Devoteam", "EdgeGuide", "Tietoevry"],
+			C201: ["Xlent", "Devoteam", "EdgeGuide", "Tietoevry"],
 		},
 		{
 			C204: ["Bonnier Healthcare", "Capgemini", "IBM", "Trafikförvaltningen – Region Stockholm"],
@@ -84,8 +84,8 @@ export const listOfCompanies = [
 	"Försäkringskassan IT",
 	"Grant Thorton",
 	"IBM",
-  "Inadra",
-  "InfoSolutions",
+	"Inadra",
+	"InfoSolutions",
 	"Innofactor",
 	"Kommando",
 	"Lantmännen",
