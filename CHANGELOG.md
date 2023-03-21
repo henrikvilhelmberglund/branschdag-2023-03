@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.6](https://github.com/henrikvilhelmberglund/branschdag-2023-03/compare/v0.0.5...v0.0.6) (2023-03-21)
+
+
+### Bug Fixes
+
+* :card_file_box: update data ([19e968f](https://github.com/henrikvilhelmberglund/branschdag-2023-03/commit/19e968f2f8560100e6fe893d94c8fa1ae27fc1fe))
+
 ## [0.0.5](https://github.com/henrikvilhelmberglund/branschdag-2023-03/compare/v0.0.4...v0.0.5) (2023-03-21)
 
 
